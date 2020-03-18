@@ -1,0 +1,56 @@
+-------------------------------------------------------------------------------------------------------------	
+	- 14.3.2019 Projektové plánovanie
+	- 18.3.2019 Vytvorenie projektu vo Visual Studiu 2017
+	- 20.3.2019 Vytvorit rozhranie pre matematicku kniznicu, Graficke rozhranie
+	- 26.3.2019 Vytvorenie testov pre matematicku kniznicu
+	- 30.3.2019 Implementacia kniznice PMath podla jej rozhrania, nasledne testovanie
+	- 8.4.2019  Prepojenie mtematickej kniznice PMath s grafickym rozhranim
+	- 15.4.2019 Dokumentacia v Doxygen, Mockup GUI, Application un/installer, Profiling
+	- 20.4.2019 User documentation, Vytovernie Makefile
+	- 22.4.2019 Vytvorenie hodnoceni.txt
+		    Vytvorenie skutecnost.txt
+		    Vytvorenie odevzdani.txt
+	- 1.5.2019  Vytvorenie xloginNN_problemy.txt
+		    Vytvorenie PDF prezentácie
+-------------------------------------------------------------------------------------------------------------
+__Rozdelenie Úloh__
+	- xzdrav00 Peter Zdravecký
+		- Projektový Plán
+		- Vytovernie projektu vo  Visual Studio (C#,Windows Forms,.NET)
+		- Vytovernie GUI prostredia pre kalkulačku
+		- Prepojenie GUI s matematickou knižnicou
+
+
+	- xfrlic00 Eduard Frlička
+		- Implementácia matematickej knižnice
+		- Programová dokumentácia v Doxygen
+		- Profilovanie
+
+	- xvano00 Jakub Vaňo   
+        	- Testy pre matematickú knižnicu
+		- Použivateľská dokumentácia
+
+	- xfajmo05 Daniel Fajmon
+        	- Mockup
+        	- Instalér a uninstalér pre Aplikáciu
+        	- Readme súbory 
+
+	- Spoločné ulohy
+		- Vytvorenie hodnotenia
+		- Vytvorenie MakeFilu
+        	- Hlásenie o zmenách mezdi planom a realitou
+		- Vytoverenie suboru odovzdania
+		- Create files xloginNN_problemy.txt
+		- PDF prezentácia
+
+-------------------------------------------------------------------------------------------------------------
+__Komunikácia__
+	-Komunikujeme cez Discord
+	-Po pár dňoch si zavoláme a zhodnotíme ako na tom sme
+	-Spoločné ulohý konzultujeme spolu
+
+__Zvolený VSC a hosting pre vzdialený repozitár__
+	- VCS: Git.
+	- Hosting: https://github.com/
+	- Repo: https://github.com/Zdravecky/IVS_PROJECT_2
+-------------------------------------------------------------------------------------------------------------
