@@ -54,7 +54,6 @@
             this.ButtonC = new System.Windows.Forms.Button();
             this.ButtonCE = new System.Windows.Forms.Button();
             this.ButtonPercent = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.MemoryTable = new System.Windows.Forms.TableLayoutPanel();
             this.ButtonMemoryminus = new System.Windows.Forms.Button();
             this.ButtonMemoryPlus = new System.Windows.Forms.Button();
@@ -481,7 +480,7 @@
             this.ButtonSquare.Name = "ButtonSquare";
             this.ButtonSquare.Size = new System.Drawing.Size(73, 47);
             this.ButtonSquare.TabIndex = 6;
-            this.ButtonSquare.Text = "²√x";
+            this.ButtonSquare.Text = "ⁿ√x";
             this.ButtonSquare.UseCompatibleTextRendering = true;
             this.ButtonSquare.UseVisualStyleBackColor = false;
             this.ButtonSquare.Click += new System.EventHandler(this.ButtonSquare_Click);
@@ -500,7 +499,7 @@
             this.ButtonPower.Name = "ButtonPower";
             this.ButtonPower.Size = new System.Drawing.Size(73, 47);
             this.ButtonPower.TabIndex = 5;
-            this.ButtonPower.Text = "x²";
+            this.ButtonPower.Text = "xⁿ";
             this.ButtonPower.UseCompatibleTextRendering = true;
             this.ButtonPower.UseVisualStyleBackColor = false;
             this.ButtonPower.Click += new System.EventHandler(this.ButtonPower_Click);
@@ -519,7 +518,7 @@
             this.ButtonFraction.Name = "ButtonFraction";
             this.ButtonFraction.Size = new System.Drawing.Size(73, 47);
             this.ButtonFraction.TabIndex = 4;
-            this.ButtonFraction.Text = "¹/x";
+            this.ButtonFraction.Text = "x!";
             this.ButtonFraction.UseCompatibleTextRendering = true;
             this.ButtonFraction.UseVisualStyleBackColor = false;
             this.ButtonFraction.Click += new System.EventHandler(this.ButtonFraction_Click);
@@ -599,13 +598,6 @@
             this.ButtonPercent.Text = "%";
             this.ButtonPercent.UseVisualStyleBackColor = false;
             this.ButtonPercent.Click += new System.EventHandler(this.ButtonPercent_Click);
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 5;
             // 
             // MemoryTable
             // 
@@ -732,7 +724,6 @@
             this.ClientSize = new System.Drawing.Size(304, 401);
             this.Controls.Add(this.Calculation);
             this.Controls.Add(this.MemoryTable);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.Result);
             this.MinimumSize = new System.Drawing.Size(320, 440);
@@ -749,7 +740,6 @@
 
         private System.Windows.Forms.TextBox Result;
         private System.Windows.Forms.TableLayoutPanel ButtonPanel;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel MemoryTable;
         private System.Windows.Forms.Button ButtonMS;
         private System.Windows.Forms.Button ButtonMemoryminus;
