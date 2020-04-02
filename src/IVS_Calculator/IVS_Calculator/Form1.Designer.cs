@@ -61,9 +61,13 @@
             this.ButtonMC = new System.Windows.Forms.Button();
             this.ButtonMS = new System.Windows.Forms.Button();
             this.CalculationBox = new System.Windows.Forms.Label();
-            this.ButtonOptions = new FontAwesome.Sharp.IconButton();
+            this.DropDownMenu = new System.Windows.Forms.Panel();
+            this.Manual = new System.Windows.Forms.Button();
+            this.Colours = new System.Windows.Forms.Button();
+            this.About = new System.Windows.Forms.Button();
             this.ButtonPanel.SuspendLayout();
             this.MemoryTable.SuspendLayout();
+            this.DropDownMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // UserInput
@@ -82,6 +86,7 @@
             this.UserInput.Tag = "";
             this.UserInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.UserInput.TextChanged += new System.EventHandler(this.UserInput_TextChanged);
+            this.UserInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UserInput_KeyPress);
             // 
             // ButtonPanel
             // 
@@ -719,25 +724,63 @@
             this.CalculationBox.Text = "5 + 6 + 7";
             this.CalculationBox.Click += new System.EventHandler(this.CalculationBox_Click);
             // 
-            // ButtonOptions
+            // DropDownMenu
             // 
-            this.ButtonOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.ButtonOptions.FlatAppearance.BorderSize = 0;
-            this.ButtonOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonOptions.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.ButtonOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ButtonOptions.IconChar = FontAwesome.Sharp.IconChar.Beer;
-            this.ButtonOptions.IconColor = System.Drawing.Color.White;
-            this.ButtonOptions.IconSize = 27;
-            this.ButtonOptions.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ButtonOptions.Location = new System.Drawing.Point(4, 8);
-            this.ButtonOptions.Margin = new System.Windows.Forms.Padding(0);
-            this.ButtonOptions.Name = "ButtonOptions";
-            this.ButtonOptions.Rotation = 0D;
-            this.ButtonOptions.Size = new System.Drawing.Size(30, 30);
-            this.ButtonOptions.TabIndex = 8;
-            this.ButtonOptions.UseVisualStyleBackColor = false;
-            this.ButtonOptions.Click += new System.EventHandler(this.ButtonOptions_Click);
+            this.DropDownMenu.Controls.Add(this.Manual);
+            this.DropDownMenu.Controls.Add(this.Colours);
+            this.DropDownMenu.Controls.Add(this.About);
+            this.DropDownMenu.Location = new System.Drawing.Point(4, 36);
+            this.DropDownMenu.Name = "DropDownMenu";
+            this.DropDownMenu.Size = new System.Drawing.Size(110, 110);
+            this.DropDownMenu.TabIndex = 9;
+            // 
+            // Manual
+            // 
+            this.Manual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(143)))), ((int)(((byte)(88)))));
+            this.Manual.FlatAppearance.BorderSize = 0;
+            this.Manual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Manual.Font = new System.Drawing.Font("Lato Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Manual.ForeColor = System.Drawing.Color.White;
+            this.Manual.Location = new System.Drawing.Point(0, 74);
+            this.Manual.Margin = new System.Windows.Forms.Padding(1);
+            this.Manual.Name = "Manual";
+            this.Manual.Size = new System.Drawing.Size(110, 35);
+            this.Manual.TabIndex = 2;
+            this.Manual.Text = "Manual";
+            this.Manual.UseVisualStyleBackColor = false;
+            this.Manual.Click += new System.EventHandler(this.Manual_Click);
+            // 
+            // Colours
+            // 
+            this.Colours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(143)))), ((int)(((byte)(88)))));
+            this.Colours.FlatAppearance.BorderSize = 0;
+            this.Colours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Colours.Font = new System.Drawing.Font("Lato Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Colours.ForeColor = System.Drawing.Color.White;
+            this.Colours.Location = new System.Drawing.Point(0, 37);
+            this.Colours.Margin = new System.Windows.Forms.Padding(1);
+            this.Colours.Name = "Colours";
+            this.Colours.Size = new System.Drawing.Size(110, 35);
+            this.Colours.TabIndex = 1;
+            this.Colours.Text = "Colours";
+            this.Colours.UseVisualStyleBackColor = false;
+            this.Colours.Click += new System.EventHandler(this.Colours_Click);
+            // 
+            // About
+            // 
+            this.About.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(143)))), ((int)(((byte)(88)))));
+            this.About.FlatAppearance.BorderSize = 0;
+            this.About.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.About.Font = new System.Drawing.Font("Lato Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.About.ForeColor = System.Drawing.Color.White;
+            this.About.Location = new System.Drawing.Point(0, 0);
+            this.About.Margin = new System.Windows.Forms.Padding(1);
+            this.About.Name = "About";
+            this.About.Size = new System.Drawing.Size(110, 35);
+            this.About.TabIndex = 0;
+            this.About.Text = "About";
+            this.About.UseVisualStyleBackColor = false;
+            this.About.Click += new System.EventHandler(this.About_Click);
             // 
             // Calculator
             // 
@@ -747,7 +790,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.CancelButton = this.ButtonCE;
             this.ClientSize = new System.Drawing.Size(304, 401);
-            this.Controls.Add(this.ButtonOptions);
+            this.Controls.Add(this.DropDownMenu);
             this.Controls.Add(this.CalculationBox);
             this.Controls.Add(this.MemoryTable);
             this.Controls.Add(this.ButtonPanel);
@@ -757,6 +800,7 @@
             this.Text = "Kalkulačka v1.0";
             this.ButtonPanel.ResumeLayout(false);
             this.MemoryTable.ResumeLayout(false);
+            this.DropDownMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -797,7 +841,10 @@
         private System.Windows.Forms.Button ButtonCE;
         private System.Windows.Forms.Button ButtonPercent;
         private System.Windows.Forms.Label CalculationBox;
-        private FontAwesome.Sharp.IconButton ButtonOptions;
+        private System.Windows.Forms.Panel DropDownMenu;
+        private System.Windows.Forms.Button About;
+        private System.Windows.Forms.Button Manual;
+        private System.Windows.Forms.Button Colours;
     }
 }
 
