@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using P_Math;
 
 namespace IVS_Calculator
 {
@@ -311,6 +312,11 @@ namespace IVS_Calculator
         }
 
         private void About_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Calculator_Load(object sender, EventArgs e)
         {
 
         }
