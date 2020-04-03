@@ -320,5 +320,10 @@ namespace IVS_Calculator
         {
 
         }
+
+        private void Calculator_KeyDown(object sender, KeyEventArgs e)
+        {
+            InsertText("1");
+        }
     }
 }
