@@ -30,54 +30,46 @@ namespace IVS_Calculator
         private void ButtonDivision_Click(object sender, EventArgs e)
         {
             InsertText("÷");
-            FocusInputText();
         }
 
         private void ButtonRoot_Click(object sender, EventArgs e)
         {
             InsertText("ⁿ√x");
-            FocusInputText();
         }
 
         private void ButtonPower_Click(object sender, EventArgs e)
         {
             InsertText("^");
-            FocusInputText();
         }
 
         private void ButtonFactorial_Click(object sender, EventArgs e)
         {
             InsertText("!");
-            FocusInputText();
         }
 
         private void ButtonMultiply_Click(object sender, EventArgs e)
         {
             InsertText("×");
-            FocusInputText();
         }
 
         private void ButtonMinus_Click(object sender, EventArgs e)
         {
             InsertText("-");
-            FocusInputText();
         }
 
         private void ButtonPlus_Click(object sender, EventArgs e)
         {
             InsertText("+");
-            FocusInputText();
         }
 
         private void ButtonPercent_Click(object sender, EventArgs e)
         {
-            FocusInputText();
+            
         }
 
         private void ButtonChange_Click(object sender, EventArgs e)
         {
             this.UserInput.Text = this.UserInput.Text.Insert(0, "-");
-            FocusInputText();
         }
 
         private void ButtonEqual_Click(object sender, EventArgs e)
@@ -93,67 +85,57 @@ namespace IVS_Calculator
         private void ButtonDot_Click(object sender, EventArgs e)
         {
             InsertText(".");
-            FocusInputText();
         }
 
         private void Button0_Click(object sender, EventArgs e)
         {
             InsertText("0");
-            FocusInputText();
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             InsertText("1");
-            FocusInputText();
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
             InsertText("2");
-            FocusInputText();
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
             InsertText("3");
-            FocusInputText();
         }
 
         private void Button4_Click(object sender, EventArgs e)
         {
             InsertText("4");
-            FocusInputText();
         }
 
         private void Button5_Click(object sender, EventArgs e)
         {
             InsertText("5");
-            FocusInputText();
+            
         }
 
         private void Button6_Click(object sender, EventArgs e)
         {
             InsertText("6");
-            FocusInputText();
         }
 
         private void Button7_Click(object sender, EventArgs e)
         {
             InsertText("7");
-            FocusInputText();
         }
 
         private void Button8_Click(object sender, EventArgs e)
         {
             InsertText("8");
-            FocusInputText();
         }
 
         private void Button9_Click(object sender, EventArgs e)
         {
             InsertText("9");
-            FocusInputText();
         }
         #endregion
 
@@ -162,11 +144,11 @@ namespace IVS_Calculator
 
         private void ButtonDel_Click(object sender, EventArgs e)
         {
-            //Deletes alwazs last char
+            //Deletes always last char
             DeleteLast();
 
             //Focus to UserInput
-            FocusInputText();
+            
         }
 
         /// <summary>
@@ -176,7 +158,7 @@ namespace IVS_Calculator
         {
             //Clears the input box
             DeleteText();
-            FocusInputText();
+            
         }
 
         private void ButtonC_Click(object sender, EventArgs e)
@@ -202,48 +184,37 @@ namespace IVS_Calculator
         #region Memory_Buttons
         private void ButtonMC_Click(object sender, EventArgs e)
         {
-            FocusInputText();
+            
         }
 
         private void ButtonMR_Click(object sender, EventArgs e)
         {
-            FocusInputText();
+            
         }
 
         private void ButtonMemoryPlus_Click(object sender, EventArgs e)
         {
-            FocusInputText();
+            
         }
 
         private void ButtonMemoryminus_Click(object sender, EventArgs e)
         {
-            FocusInputText();
+            
         }
 
         private void ButtonMS_Click(object sender, EventArgs e)
         {
-            FocusInputText();
+            
         }
         #endregion
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         #region Options
-        private void ButtonOptions_Click(object sender, EventArgs e)
-        {
 
-        }
         #endregion
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         #region Help Functions
-
-        /// <summary>
-        /// After using button focus goes to Input
-        /// </summary>
-        private void FocusInputText()
-        {
-            this.UserInput.Focus();
-        }
 
         /// <summary>
         /// Takes string and places it on position of cursor
@@ -311,21 +282,6 @@ namespace IVS_Calculator
             {
                 e.Handled = true;
             }
-        }
-
-        private void Manual_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Colours_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void About_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Calculator_Load(object sender, EventArgs e)
