@@ -1,5 +1,4 @@
-﻿@@ -0,0 +1,458 @@
-﻿/**
+﻿﻿/**
  * @file OwnMath.cs
  * @author Eduard Frlička
  * @date 2020-04-04
