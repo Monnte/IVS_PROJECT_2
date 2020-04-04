@@ -13,6 +13,8 @@ namespace IVS_Calculator
 {
     public partial class Calculator : Form
     {
+        enum Operators { add, sub, mul, div }
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         #region Constructor
         public Calculator()
@@ -21,10 +23,10 @@ namespace IVS_Calculator
         }
 
         #endregion
-        
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         #region Operators
-        
+
         private void ButtonDivision_Click(object sender, EventArgs e)
         {
             InsertText("÷");
@@ -99,19 +101,19 @@ namespace IVS_Calculator
             InsertText("0");
             FocusInputText();
         }
-       
+
         private void Button1_Click(object sender, EventArgs e)
         {
             InsertText("1");
             FocusInputText();
         }
-        
+
         private void Button2_Click(object sender, EventArgs e)
         {
             InsertText("2");
             FocusInputText();
         }
-        
+
         private void Button3_Click(object sender, EventArgs e)
         {
             InsertText("3");
@@ -161,8 +163,8 @@ namespace IVS_Calculator
         private void ButtonDel_Click(object sender, EventArgs e)
         {
             //Deletes alwazs last char
-            DeleteText();  
-            
+            DeleteLast();
+
             //Focus to UserInput
             FocusInputText();
         }
@@ -173,7 +175,7 @@ namespace IVS_Calculator
         private void ButtonCE_Click(object sender, EventArgs e)
         {
             //Clears the input box
-            this.UserInput.Text = string.Empty;
+            DeleteText();
             FocusInputText();
         }
 
@@ -261,7 +263,17 @@ namespace IVS_Calculator
             this.UserInput.SelectionLength = 0;
         }
 
+        private void InsertOperator(Operators value)
+        {
+            InsertText(value.ToString());
+        }
+
         private void DeleteText()
+        {
+            this.UserInput.Text = string.Empty;
+        }
+
+        private void DeleteLast()
         {
             //if theres no input, do nothing
             if (UserInput.TextLength == 0)
@@ -323,7 +335,61 @@ namespace IVS_Calculator
 
         private void Calculator_KeyDown(object sender, KeyEventArgs e)
         {
-            InsertText("1");
+
+            switch (e.KeyValue)
+            {
+                case 8:
+                    DeleteLast();
+                    break;
+                case 46:
+                    DeleteText();
+                    break;
+                case 96:
+                    InsertText("0");
+                    break;
+                case 97:
+                    InsertText("1");
+                    break;
+                case 98:
+                    InsertText("2");
+                    break;
+                case 99:
+                    InsertText("3");
+                    break;
+                case 100:
+                    InsertText("4");
+                    break;
+                case 101:
+                    InsertText("5");
+                    break;
+                case 102:
+                    InsertText("6");
+                    break;
+                case 103:
+                    InsertText("7");
+                    break;
+                case 104:
+                    InsertText("8");
+                    break;
+                case 105:
+                    InsertText("9");
+                    break;
+                case 111:
+                    InsertOperator(Operators.div);
+                    break;
+                case 106:
+                    InsertOperator(Operators.mul);
+                    break;
+                case 109:
+                    InsertOperator(Operators.sub);
+                    break;
+                case 107:
+                    InsertOperator(Operators.add);
+                    break;
+                default:
+                    InsertText(e.KeyValue.ToString());
+                    break;
+            }
         }
     }
 }
