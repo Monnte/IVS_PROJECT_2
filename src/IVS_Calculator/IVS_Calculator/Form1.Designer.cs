@@ -160,6 +160,7 @@
             this.Button2.UseCompatibleTextRendering = true;
             this.Button2.UseVisualStyleBackColor = false;
             this.Button2.Click += new System.EventHandler(this.Button2_Click);
+            this.Button2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonEqual
             // 
@@ -179,6 +180,7 @@
             this.ButtonEqual.UseCompatibleTextRendering = true;
             this.ButtonEqual.UseVisualStyleBackColor = false;
             this.ButtonEqual.Click += new System.EventHandler(this.ButtonEqual_Click);
+            this.ButtonEqual.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonDot
             // 
@@ -198,6 +200,7 @@
             this.ButtonDot.UseCompatibleTextRendering = true;
             this.ButtonDot.UseVisualStyleBackColor = false;
             this.ButtonDot.Click += new System.EventHandler(this.ButtonDot_Click);
+            this.ButtonDot.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // Button0
             // 
@@ -218,6 +221,7 @@
             this.Button0.UseCompatibleTextRendering = true;
             this.Button0.UseVisualStyleBackColor = false;
             this.Button0.Click += new System.EventHandler(this.Button0_Click);
+            this.Button0.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonChange
             // 
@@ -237,6 +241,7 @@
             this.ButtonChange.UseCompatibleTextRendering = true;
             this.ButtonChange.UseVisualStyleBackColor = false;
             this.ButtonChange.Click += new System.EventHandler(this.ButtonChange_Click);
+            this.ButtonChange.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonPlus
             // 
@@ -256,6 +261,7 @@
             this.ButtonPlus.UseCompatibleTextRendering = true;
             this.ButtonPlus.UseVisualStyleBackColor = false;
             this.ButtonPlus.Click += new System.EventHandler(this.ButtonPlus_Click);
+            this.ButtonPlus.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // Button3
             // 
@@ -276,6 +282,7 @@
             this.Button3.UseCompatibleTextRendering = true;
             this.Button3.UseVisualStyleBackColor = false;
             this.Button3.Click += new System.EventHandler(this.Button3_Click);
+            this.Button3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // Button1
             // 
@@ -296,6 +303,7 @@
             this.Button1.UseCompatibleTextRendering = true;
             this.Button1.UseVisualStyleBackColor = false;
             this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            this.Button1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonMinus
             // 
@@ -315,6 +323,7 @@
             this.ButtonMinus.UseCompatibleTextRendering = true;
             this.ButtonMinus.UseVisualStyleBackColor = false;
             this.ButtonMinus.Click += new System.EventHandler(this.ButtonMinus_Click);
+            this.ButtonMinus.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // Button6
             // 
@@ -335,6 +344,7 @@
             this.Button6.UseCompatibleTextRendering = true;
             this.Button6.UseVisualStyleBackColor = false;
             this.Button6.Click += new System.EventHandler(this.Button6_Click);
+            this.Button6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // Button5
             // 
@@ -355,6 +365,7 @@
             this.Button5.UseCompatibleTextRendering = true;
             this.Button5.UseVisualStyleBackColor = false;
             this.Button5.Click += new System.EventHandler(this.Button5_Click);
+            this.Button5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // Button4
             // 
@@ -375,6 +386,7 @@
             this.Button4.UseCompatibleTextRendering = true;
             this.Button4.UseVisualStyleBackColor = false;
             this.Button4.Click += new System.EventHandler(this.Button4_Click);
+            this.Button4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonMultiply
             // 
@@ -394,6 +406,7 @@
             this.ButtonMultiply.UseCompatibleTextRendering = true;
             this.ButtonMultiply.UseVisualStyleBackColor = false;
             this.ButtonMultiply.Click += new System.EventHandler(this.ButtonMultiply_Click);
+            this.ButtonMultiply.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // Button9
             // 
@@ -435,6 +448,7 @@
             this.Button8.UseCompatibleTextRendering = true;
             this.Button8.UseVisualStyleBackColor = false;
             this.Button8.Click += new System.EventHandler(this.Button8_Click);
+            this.Button8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // Button7
             // 
@@ -455,6 +469,7 @@
             this.Button7.UseCompatibleTextRendering = true;
             this.Button7.UseVisualStyleBackColor = false;
             this.Button7.Click += new System.EventHandler(this.Button7_Click);
+            this.Button7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonDivision
             // 
@@ -474,6 +489,7 @@
             this.ButtonDivision.UseCompatibleTextRendering = true;
             this.ButtonDivision.UseVisualStyleBackColor = false;
             this.ButtonDivision.Click += new System.EventHandler(this.ButtonDivision_Click);
+            this.ButtonDivision.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonRoot
             // 
@@ -493,6 +509,7 @@
             this.ButtonRoot.UseCompatibleTextRendering = true;
             this.ButtonRoot.UseVisualStyleBackColor = false;
             this.ButtonRoot.Click += new System.EventHandler(this.ButtonRoot_Click);
+            this.ButtonRoot.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonPower
             // 
@@ -512,6 +529,7 @@
             this.ButtonPower.UseCompatibleTextRendering = true;
             this.ButtonPower.UseVisualStyleBackColor = false;
             this.ButtonPower.Click += new System.EventHandler(this.ButtonPower_Click);
+            this.ButtonPower.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonFactorial
             // 
@@ -531,6 +549,7 @@
             this.ButtonFactorial.UseCompatibleTextRendering = true;
             this.ButtonFactorial.UseVisualStyleBackColor = false;
             this.ButtonFactorial.Click += new System.EventHandler(this.ButtonFactorial_Click);
+            this.ButtonFactorial.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonDel
             // 
@@ -550,6 +569,7 @@
             this.ButtonDel.UseCompatibleTextRendering = true;
             this.ButtonDel.UseVisualStyleBackColor = false;
             this.ButtonDel.Click += new System.EventHandler(this.ButtonDel_Click);
+            this.ButtonDel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonC
             // 
@@ -569,6 +589,7 @@
             this.ButtonC.UseCompatibleTextRendering = true;
             this.ButtonC.UseVisualStyleBackColor = false;
             this.ButtonC.Click += new System.EventHandler(this.ButtonC_Click);
+            this.ButtonC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonCE
             // 
@@ -589,6 +610,7 @@
             this.ButtonCE.UseCompatibleTextRendering = true;
             this.ButtonCE.UseVisualStyleBackColor = false;
             this.ButtonCE.Click += new System.EventHandler(this.ButtonCE_Click);
+            this.ButtonCE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonPercent
             // 
@@ -607,6 +629,7 @@
             this.ButtonPercent.Text = "%";
             this.ButtonPercent.UseVisualStyleBackColor = false;
             this.ButtonPercent.Click += new System.EventHandler(this.ButtonPercent_Click);
+            this.ButtonPercent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // MemoryTable
             // 
@@ -650,6 +673,7 @@
             this.ButtonMemoryminus.UseCompatibleTextRendering = true;
             this.ButtonMemoryminus.UseVisualStyleBackColor = true;
             this.ButtonMemoryminus.Click += new System.EventHandler(this.ButtonMemoryminus_Click);
+            this.ButtonMemoryminus.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonMemoryPlus
             // 
@@ -668,6 +692,7 @@
             this.ButtonMemoryPlus.UseCompatibleTextRendering = true;
             this.ButtonMemoryPlus.UseVisualStyleBackColor = false;
             this.ButtonMemoryPlus.Click += new System.EventHandler(this.ButtonMemoryPlus_Click);
+            this.ButtonMemoryPlus.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonMR
             // 
@@ -685,6 +710,7 @@
             this.ButtonMR.UseCompatibleTextRendering = true;
             this.ButtonMR.UseVisualStyleBackColor = true;
             this.ButtonMR.Click += new System.EventHandler(this.ButtonMR_Click);
+            this.ButtonMR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonMC
             // 
@@ -719,6 +745,7 @@
             this.ButtonMS.UseCompatibleTextRendering = true;
             this.ButtonMS.UseVisualStyleBackColor = true;
             this.ButtonMS.Click += new System.EventHandler(this.ButtonMS_Click);
+            this.ButtonMS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // CalculationBox
             // 
