@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IVS_Calculator", "IVS_Calculator\IVS_Calculator.csproj", "{705C98EA-99BB-4229-9D8B-697830072D03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P_Math", "P_Math\P_Math.csproj", "{6302B38A-ABAE-402A-9571-6654DB8D9993}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P_Math", "P_Math\P_Math.csproj", "{6302B38A-ABAE-402A-9571-6654DB8D9993}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P_Math_Tests", "P_Math_Tests\P_Math_Tests.csproj", "{38681F05-6F10-4FDC-96C3-B231B4EC9983}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6302B38A-ABAE-402A-9571-6654DB8D9993}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6302B38A-ABAE-402A-9571-6654DB8D9993}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6302B38A-ABAE-402A-9571-6654DB8D9993}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38681F05-6F10-4FDC-96C3-B231B4EC9983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38681F05-6F10-4FDC-96C3-B231B4EC9983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38681F05-6F10-4FDC-96C3-B231B4EC9983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38681F05-6F10-4FDC-96C3-B231B4EC9983}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
