@@ -69,7 +69,25 @@ namespace IVS_Calculator
 
         private void ButtonChange_Click(object sender, EventArgs e)
         {
-            this.UserInput.Text = this.UserInput.Text.Insert(0, "-");
+            if (this.UserInput.Text.Contains("-")) {
+                this.UserInput.Text = this.UserInput.Text.Remove(0, 1);
+            }
+            else
+            {
+                this.UserInput.Text = "-" + this.UserInput.Text;
+            }
+        }
+
+        private void ButtonDot_Click(object sender, EventArgs e)
+        {
+
+            if (!this.UserInput.Text.Contains(".")) { 
+                this.UserInput.Text = this.UserInput.Text + ".";
+            }
+            else
+            {
+                this.UserInput.Text = this.UserInput.Text;
+            }
         }
 
         private void ButtonEqual_Click(object sender, EventArgs e)
@@ -81,11 +99,6 @@ namespace IVS_Calculator
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         #region Numbers
-
-        private void ButtonDot_Click(object sender, EventArgs e)
-        {
-            InsertText(".");
-        }
 
         private void Button0_Click(object sender, EventArgs e)
         {
@@ -145,10 +158,7 @@ namespace IVS_Calculator
         private void ButtonDel_Click(object sender, EventArgs e)
         {
             //Deletes always last char
-            DeleteLast();
-
-            //Focus to UserInput
-            
+            DeleteLast();  
         }
 
         /// <summary>
@@ -158,7 +168,6 @@ namespace IVS_Calculator
         {
             //Clears the input box
             DeleteText();
-            
         }
 
         private void ButtonC_Click(object sender, EventArgs e)
@@ -174,9 +183,22 @@ namespace IVS_Calculator
 
         }
 
-        private void CalculationBox_Click(object sender, EventArgs e)
+        //after clicking operation the value and operator is transfered to CalculationBox
+        private void OperationsOnClick(object sender, EventArgs e)
         {
-
+            
+            Double result = 0;
+            String operation = "";
+            Button b = (Button)sender;
+            operation = b.Text;
+            //if (UserInput.Text == string.Empty)
+                //TODO
+            //else
+            {
+                result = Double.Parse(UserInput.Text);
+                UserInput.Text = string.Empty;
+                CalculationBox.Text = System.Convert.ToString(result) + " " + operation;
+            }
         }
         #endregion
 
@@ -221,17 +243,8 @@ namespace IVS_Calculator
         /// </summary>
         private void InsertText(string value)
         {
-            //remember selection start
-            var selectionStart = this.UserInput.SelectionStart;
-
-            //input new tetx
-            this.UserInput.Text = this.UserInput.Text.Insert(this.UserInput.SelectionStart, value);
-
-            //restore position of cursor
-            this.UserInput.SelectionStart = selectionStart + value.Length;
-
-            //selection lenght set to 0
-            this.UserInput.SelectionLength = 0;
+            //input new text
+            this.UserInput.Text = this.UserInput.Text.Insert(this.UserInput.Text.Length, value);
         }
 
         private void InsertOperator(Operators value)
@@ -247,20 +260,10 @@ namespace IVS_Calculator
         private void DeleteLast()
         {
             //if theres no input, do nothing
-            if (UserInput.TextLength == 0)
+            if (UserInput.Text.Length == 0)
                 return;
-
-            //remember selection start
-            var selectionStart = this.UserInput.SelectionStart;
-
             //Delete last character
             UserInput.Text = UserInput.Text.Remove(UserInput.Text.Length - 1, 1);
-
-            //restore position of cursor
-            this.UserInput.SelectionStart = selectionStart;
-
-            //selection lenght set to 0
-            this.UserInput.SelectionLength = 0;
         }
 
         #endregion
