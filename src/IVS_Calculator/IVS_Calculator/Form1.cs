@@ -14,7 +14,9 @@ namespace IVS_Calculator
     public partial class Calculator : Form
     {
         enum Operators { add, sub, mul, div }
-
+        //used for CalculationBox
+        Double result = 0;
+        String operation = "";
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         #region Constructor
         public Calculator()
@@ -184,17 +186,19 @@ namespace IVS_Calculator
         }
 
         //after clicking operation the value and operator is transfered to CalculationBox
+        //after clicking operation the value and operator is transfered to CalculationBox
         private void OperationsOnClick(object sender, EventArgs e)
         {
-            
-            Double result = 0;
-            String operation = "";
             Button b = (Button)sender;
-            operation = b.Text;
-            //if (UserInput.Text == string.Empty)
-                //TODO
-            //else
+
+            if (UserInput.Text == string.Empty)
             {
+                operation = b.Text;
+                CalculationBox.Text = result + " " + operation;
+            }
+            else
+            {
+                operation = b.Text;
                 result = Double.Parse(UserInput.Text);
                 UserInput.Text = string.Empty;
                 CalculationBox.Text = System.Convert.ToString(result) + " " + operation;
@@ -349,6 +353,12 @@ namespace IVS_Calculator
                     InsertText(e.KeyValue.ToString());
                     break;
             }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var about = new About();
+            about.Show();
         }
     }
 }
