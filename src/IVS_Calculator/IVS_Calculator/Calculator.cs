@@ -360,5 +360,17 @@ namespace IVS_Calculator
             var about = new About();
             about.Show();
         }
+
+        private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var help = new Help();
+            help.Show();
+        }
+
+        private void coloursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var colours = new Colours();
+            colours.Show();
+        }
     }
 }
