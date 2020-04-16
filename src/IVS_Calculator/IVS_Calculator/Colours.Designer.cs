@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Colours));
             this.label1 = new System.Windows.Forms.Label();
-            this.dialog_memory_mc = new System.Windows.Forms.ColorDialog();
-            this.dialog_memory_mr = new System.Windows.Forms.ColorDialog();
-            this.dialog_memory_plus = new System.Windows.Forms.ColorDialog();
             this.saveButt = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.background = new System.Windows.Forms.Button();
@@ -71,36 +68,7 @@
             this.button_memory_mr = new System.Windows.Forms.Button();
             this.button_memory_mc = new System.Windows.Forms.Button();
             this.button_memory_ms = new System.Windows.Forms.Button();
-            this.dialog_memory_minus = new System.Windows.Forms.ColorDialog();
-            this.dialog_memory_ms = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_percent = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_ce = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_del = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_factorial = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_power = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_root = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_abs = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_fraction = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_power2 = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_root2 = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_division = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_multiply = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_minus = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_plus = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_equal = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_dot = new System.Windows.Forms.ColorDialog();
-            this.dialog_oper_change = new System.Windows.Forms.ColorDialog();
-            this.dialog_num_0 = new System.Windows.Forms.ColorDialog();
-            this.dialog_num_1 = new System.Windows.Forms.ColorDialog();
-            this.dialog_num_2 = new System.Windows.Forms.ColorDialog();
-            this.dialog_num_3 = new System.Windows.Forms.ColorDialog();
-            this.dialog_num_4 = new System.Windows.Forms.ColorDialog();
-            this.dialog_num_5 = new System.Windows.Forms.ColorDialog();
-            this.dialog_num_6 = new System.Windows.Forms.ColorDialog();
-            this.dialog_num_7 = new System.Windows.Forms.ColorDialog();
-            this.dialog_num_8 = new System.Windows.Forms.ColorDialog();
-            this.dialog_num_9 = new System.Windows.Forms.ColorDialog();
-            this.background_color = new System.Windows.Forms.ColorDialog();
+            this.color_dialog = new System.Windows.Forms.ColorDialog();
             this.ButtonPanel.SuspendLayout();
             this.MemoryTable.SuspendLayout();
             this.SuspendLayout();
@@ -116,19 +84,6 @@
             this.label1.Size = new System.Drawing.Size(305, 39);
             this.label1.TabIndex = 8;
             this.label1.Text = "Edit color scheme :";
-            // 
-            // dialog_memory_mc
-            // 
-            this.dialog_memory_mc.AnyColor = true;
-            this.dialog_memory_mc.FullOpen = true;
-            // 
-            // dialog_memory_mr
-            // 
-            this.dialog_memory_mr.FullOpen = true;
-            // 
-            // dialog_memory_plus
-            // 
-            this.dialog_memory_plus.FullOpen = true;
             // 
             // saveButt
             // 
@@ -378,6 +333,7 @@
             this.button_oper_del.Text = "DEL";
             this.button_oper_del.UseCompatibleTextRendering = true;
             this.button_oper_del.UseVisualStyleBackColor = false;
+            this.button_oper_del.Click += new System.EventHandler(this.button_oper_del_Click);
             // 
             // button_oper_c
             // 
@@ -396,6 +352,7 @@
             this.button_oper_c.Text = "C";
             this.button_oper_c.UseCompatibleTextRendering = true;
             this.button_oper_c.UseVisualStyleBackColor = false;
+            this.button_oper_c.Click += new System.EventHandler(this.button_oper_c_Click);
             // 
             // button_oper_ce
             // 
@@ -415,6 +372,7 @@
             this.button_oper_ce.Text = "CE";
             this.button_oper_ce.UseCompatibleTextRendering = true;
             this.button_oper_ce.UseVisualStyleBackColor = false;
+            this.button_oper_ce.Click += new System.EventHandler(this.button_oper_ce_Click);
             // 
             // button_oper_percent
             // 
@@ -432,6 +390,7 @@
             this.button_oper_percent.TabIndex = 0;
             this.button_oper_percent.Text = "%";
             this.button_oper_percent.UseVisualStyleBackColor = false;
+            this.button_oper_percent.Click += new System.EventHandler(this.button_oper_percent_Click);
             // 
             // button_oper_equal
             // 
@@ -906,9 +865,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ColorDialog dialog_memory_mc;
-        private System.Windows.Forms.ColorDialog dialog_memory_mr;
-        private System.Windows.Forms.ColorDialog dialog_memory_plus;
         private System.Windows.Forms.Button saveButt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button background;
@@ -947,35 +903,6 @@
         private System.Windows.Forms.Button button_memory_mr;
         private System.Windows.Forms.Button button_memory_mc;
         private System.Windows.Forms.Button button_memory_ms;
-        private System.Windows.Forms.ColorDialog dialog_memory_minus;
-        private System.Windows.Forms.ColorDialog dialog_memory_ms;
-        private System.Windows.Forms.ColorDialog dialog_oper_percent;
-        private System.Windows.Forms.ColorDialog dialog_oper_ce;
-        private System.Windows.Forms.ColorDialog dialog_oper_del;
-        private System.Windows.Forms.ColorDialog dialog_oper_factorial;
-        private System.Windows.Forms.ColorDialog dialog_oper_power;
-        private System.Windows.Forms.ColorDialog dialog_oper_root;
-        private System.Windows.Forms.ColorDialog dialog_oper_abs;
-        private System.Windows.Forms.ColorDialog dialog_oper_fraction;
-        private System.Windows.Forms.ColorDialog dialog_oper_power2;
-        private System.Windows.Forms.ColorDialog dialog_oper_root2;
-        private System.Windows.Forms.ColorDialog dialog_oper_division;
-        private System.Windows.Forms.ColorDialog dialog_oper_multiply;
-        private System.Windows.Forms.ColorDialog dialog_oper_minus;
-        private System.Windows.Forms.ColorDialog dialog_oper_plus;
-        private System.Windows.Forms.ColorDialog dialog_oper_equal;
-        private System.Windows.Forms.ColorDialog dialog_oper_dot;
-        private System.Windows.Forms.ColorDialog dialog_oper_change;
-        private System.Windows.Forms.ColorDialog dialog_num_0;
-        private System.Windows.Forms.ColorDialog dialog_num_1;
-        private System.Windows.Forms.ColorDialog dialog_num_2;
-        private System.Windows.Forms.ColorDialog dialog_num_3;
-        private System.Windows.Forms.ColorDialog dialog_num_4;
-        private System.Windows.Forms.ColorDialog dialog_num_5;
-        private System.Windows.Forms.ColorDialog dialog_num_6;
-        private System.Windows.Forms.ColorDialog dialog_num_7;
-        private System.Windows.Forms.ColorDialog dialog_num_8;
-        private System.Windows.Forms.ColorDialog dialog_num_9;
-        private System.Windows.Forms.ColorDialog background_color;
+        private System.Windows.Forms.ColorDialog color_dialog;
     }
 }
