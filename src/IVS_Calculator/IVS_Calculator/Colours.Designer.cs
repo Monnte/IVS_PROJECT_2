@@ -69,6 +69,8 @@
             this.button_memory_mc = new System.Windows.Forms.Button();
             this.button_memory_ms = new System.Windows.Forms.Button();
             this.color_dialog = new System.Windows.Forms.ColorDialog();
+            this.check_background = new System.Windows.Forms.RadioButton();
+            this.check_font = new System.Windows.Forms.RadioButton();
             this.ButtonPanel.SuspendLayout();
             this.MemoryTable.SuspendLayout();
             this.SuspendLayout();
@@ -93,9 +95,9 @@
             this.saveButt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.saveButt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.saveButt.Location = new System.Drawing.Point(10, 460);
+            this.saveButt.Location = new System.Drawing.Point(304, 376);
             this.saveButt.Name = "saveButt";
-            this.saveButt.Size = new System.Drawing.Size(163, 45);
+            this.saveButt.Size = new System.Drawing.Size(267, 107);
             this.saveButt.TabIndex = 12;
             this.saveButt.Text = "Save settings";
             this.saveButt.UseVisualStyleBackColor = false;
@@ -120,11 +122,11 @@
             this.background.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.background.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.background.ForeColor = System.Drawing.Color.White;
-            this.background.Location = new System.Drawing.Point(304, 126);
+            this.background.Location = new System.Drawing.Point(304, 206);
             this.background.Name = "background";
-            this.background.Size = new System.Drawing.Size(267, 88);
+            this.background.Size = new System.Drawing.Size(267, 90);
             this.background.TabIndex = 15;
-            this.background.Text = "Background color";
+            this.background.Text = "Calculator background color";
             this.background.UseVisualStyleBackColor = false;
             this.background.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -168,7 +170,7 @@
             this.ButtonPanel.Controls.Add(this.button_oper_minus, 3, 4);
             this.ButtonPanel.Controls.Add(this.button_oper_multiply, 3, 3);
             this.ButtonPanel.Controls.Add(this.button_oper_division, 3, 2);
-            this.ButtonPanel.Location = new System.Drawing.Point(10, 126);
+            this.ButtonPanel.Location = new System.Drawing.Point(10, 163);
             this.ButtonPanel.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonPanel.Name = "ButtonPanel";
             this.ButtonPanel.RowCount = 7;
@@ -742,7 +744,7 @@
             this.MemoryTable.Controls.Add(this.button_memory_mr, 1, 0);
             this.MemoryTable.Controls.Add(this.button_memory_mc, 0, 0);
             this.MemoryTable.Controls.Add(this.button_memory_ms, 4, 0);
-            this.MemoryTable.Location = new System.Drawing.Point(9, 91);
+            this.MemoryTable.Location = new System.Drawing.Point(9, 128);
             this.MemoryTable.Margin = new System.Windows.Forms.Padding(0);
             this.MemoryTable.Name = "MemoryTable";
             this.MemoryTable.RowCount = 1;
@@ -837,12 +839,38 @@
             this.button_memory_ms.UseVisualStyleBackColor = true;
             this.button_memory_ms.Click += new System.EventHandler(this.button_memory_ms_Click);
             // 
+            // check_background
+            // 
+            this.check_background.AutoSize = true;
+            this.check_background.ForeColor = System.Drawing.Color.White;
+            this.check_background.Location = new System.Drawing.Point(304, 131);
+            this.check_background.Name = "check_background";
+            this.check_background.Size = new System.Drawing.Size(184, 21);
+            this.check_background.TabIndex = 18;
+            this.check_background.TabStop = true;
+            this.check_background.Text = "Button background color";
+            this.check_background.UseVisualStyleBackColor = true;
+            // 
+            // check_font
+            // 
+            this.check_font.AutoSize = true;
+            this.check_font.ForeColor = System.Drawing.Color.White;
+            this.check_font.Location = new System.Drawing.Point(304, 166);
+            this.check_font.Name = "check_font";
+            this.check_font.Size = new System.Drawing.Size(133, 21);
+            this.check_font.TabIndex = 19;
+            this.check_font.TabStop = true;
+            this.check_font.Text = "Button font color";
+            this.check_font.UseVisualStyleBackColor = true;
+            // 
             // Colours
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(583, 517);
+            this.Controls.Add(this.check_font);
+            this.Controls.Add(this.check_background);
             this.Controls.Add(this.MemoryTable);
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.background);
@@ -904,5 +932,7 @@
         private System.Windows.Forms.Button button_memory_mc;
         private System.Windows.Forms.Button button_memory_ms;
         private System.Windows.Forms.ColorDialog color_dialog;
+        private System.Windows.Forms.RadioButton check_background;
+        private System.Windows.Forms.RadioButton check_font;
     }
 }
