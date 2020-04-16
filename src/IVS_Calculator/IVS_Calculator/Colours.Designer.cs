@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Colours));
             this.label1 = new System.Windows.Forms.Label();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog3 = new System.Windows.Forms.ColorDialog();
+            this.dialog_memory_mc = new System.Windows.Forms.ColorDialog();
+            this.dialog_memory_mr = new System.Windows.Forms.ColorDialog();
+            this.dialog_memory_plus = new System.Windows.Forms.ColorDialog();
             this.saveButt = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.background = new System.Windows.Forms.Button();
             this.ButtonPanel = new System.Windows.Forms.TableLayoutPanel();
             this.button_oper_root2 = new System.Windows.Forms.Button();
             this.button_oper_power2 = new System.Windows.Forms.Button();
@@ -71,37 +71,36 @@
             this.button_memory_mr = new System.Windows.Forms.Button();
             this.button_memory_mc = new System.Windows.Forms.Button();
             this.button_memory_ms = new System.Windows.Forms.Button();
-            this.colorDialog4 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog5 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog6 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog7 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog8 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog9 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog10 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog11 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog12 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog13 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog14 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog15 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog16 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog17 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog18 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog19 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog20 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog21 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog22 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog23 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog24 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog25 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog26 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog27 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog28 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog29 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog30 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog31 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog32 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog33 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog34 = new System.Windows.Forms.ColorDialog();
+            this.dialog_memory_minus = new System.Windows.Forms.ColorDialog();
+            this.dialog_memory_ms = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_percent = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_ce = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_del = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_factorial = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_power = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_root = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_abs = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_fraction = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_power2 = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_root2 = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_division = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_multiply = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_minus = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_plus = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_equal = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_dot = new System.Windows.Forms.ColorDialog();
+            this.dialog_oper_change = new System.Windows.Forms.ColorDialog();
+            this.dialog_num_0 = new System.Windows.Forms.ColorDialog();
+            this.dialog_num_1 = new System.Windows.Forms.ColorDialog();
+            this.dialog_num_2 = new System.Windows.Forms.ColorDialog();
+            this.dialog_num_3 = new System.Windows.Forms.ColorDialog();
+            this.dialog_num_4 = new System.Windows.Forms.ColorDialog();
+            this.dialog_num_5 = new System.Windows.Forms.ColorDialog();
+            this.dialog_num_6 = new System.Windows.Forms.ColorDialog();
+            this.dialog_num_7 = new System.Windows.Forms.ColorDialog();
+            this.dialog_num_8 = new System.Windows.Forms.ColorDialog();
+            this.dialog_num_9 = new System.Windows.Forms.ColorDialog();
+            this.background_color = new System.Windows.Forms.ColorDialog();
             this.ButtonPanel.SuspendLayout();
             this.MemoryTable.SuspendLayout();
             this.SuspendLayout();
@@ -118,18 +117,18 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Edit color scheme :";
             // 
-            // colorDialog1
+            // dialog_memory_mc
             // 
-            this.colorDialog1.AnyColor = true;
-            this.colorDialog1.FullOpen = true;
+            this.dialog_memory_mc.AnyColor = true;
+            this.dialog_memory_mc.FullOpen = true;
             // 
-            // colorDialog2
+            // dialog_memory_mr
             // 
-            this.colorDialog2.FullOpen = true;
+            this.dialog_memory_mr.FullOpen = true;
             // 
-            // colorDialog3
+            // dialog_memory_plus
             // 
-            this.colorDialog3.FullOpen = true;
+            this.dialog_memory_plus.FullOpen = true;
             // 
             // saveButt
             // 
@@ -158,20 +157,21 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Change button color by clicking on it.";
             // 
-            // button1
+            // background
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(304, 126);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(267, 88);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Background color";
-            this.button1.UseVisualStyleBackColor = false;
+            this.background.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.background.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.background.FlatAppearance.BorderSize = 0;
+            this.background.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.background.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.background.ForeColor = System.Drawing.Color.White;
+            this.background.Location = new System.Drawing.Point(304, 126);
+            this.background.Name = "background";
+            this.background.Size = new System.Drawing.Size(267, 88);
+            this.background.TabIndex = 15;
+            this.background.Text = "Background color";
+            this.background.UseVisualStyleBackColor = false;
+            this.background.Click += new System.EventHandler(this.button1_Click);
             // 
             // ButtonPanel
             // 
@@ -245,6 +245,7 @@
             this.button_oper_root2.Text = "²√x";
             this.button_oper_root2.UseCompatibleTextRendering = true;
             this.button_oper_root2.UseVisualStyleBackColor = false;
+            this.button_oper_root2.Click += new System.EventHandler(this.button_oper_root2_Click);
             // 
             // button_oper_power2
             // 
@@ -263,6 +264,7 @@
             this.button_oper_power2.Text = "x²";
             this.button_oper_power2.UseCompatibleTextRendering = true;
             this.button_oper_power2.UseVisualStyleBackColor = false;
+            this.button_oper_power2.Click += new System.EventHandler(this.button_oper_power2_Click);
             // 
             // button_oper_fraction
             // 
@@ -281,6 +283,7 @@
             this.button_oper_fraction.Text = "1/x";
             this.button_oper_fraction.UseCompatibleTextRendering = true;
             this.button_oper_fraction.UseVisualStyleBackColor = false;
+            this.button_oper_fraction.Click += new System.EventHandler(this.button_oper_fraction_Click);
             // 
             // button_oper_abs
             // 
@@ -299,6 +302,7 @@
             this.button_oper_abs.Text = "|x|";
             this.button_oper_abs.UseCompatibleTextRendering = true;
             this.button_oper_abs.UseVisualStyleBackColor = false;
+            this.button_oper_abs.Click += new System.EventHandler(this.button_oper_abs_Click);
             // 
             // button_oper_root
             // 
@@ -317,6 +321,7 @@
             this.button_oper_root.Text = "ⁿ√x";
             this.button_oper_root.UseCompatibleTextRendering = true;
             this.button_oper_root.UseVisualStyleBackColor = false;
+            this.button_oper_root.Click += new System.EventHandler(this.button_oper_root_Click);
             // 
             // button_oper_power
             // 
@@ -335,6 +340,7 @@
             this.button_oper_power.Text = "xⁿ";
             this.button_oper_power.UseCompatibleTextRendering = true;
             this.button_oper_power.UseVisualStyleBackColor = false;
+            this.button_oper_power.Click += new System.EventHandler(this.button_oper_power_Click);
             // 
             // button_oper_factorial
             // 
@@ -353,6 +359,7 @@
             this.button_oper_factorial.Text = "x!";
             this.button_oper_factorial.UseCompatibleTextRendering = true;
             this.button_oper_factorial.UseVisualStyleBackColor = false;
+            this.button_oper_factorial.Click += new System.EventHandler(this.button_oper_factorial_Click);
             // 
             // button_oper_del
             // 
@@ -443,6 +450,7 @@
             this.button_oper_equal.Text = "=";
             this.button_oper_equal.UseCompatibleTextRendering = true;
             this.button_oper_equal.UseVisualStyleBackColor = false;
+            this.button_oper_equal.Click += new System.EventHandler(this.button_oper_equal_Click);
             // 
             // button_oper_dot
             // 
@@ -461,6 +469,7 @@
             this.button_oper_dot.Text = ".";
             this.button_oper_dot.UseCompatibleTextRendering = true;
             this.button_oper_dot.UseVisualStyleBackColor = false;
+            this.button_oper_dot.Click += new System.EventHandler(this.button_oper_dot_Click);
             // 
             // button_num_0
             // 
@@ -480,6 +489,7 @@
             this.button_num_0.Text = "0";
             this.button_num_0.UseCompatibleTextRendering = true;
             this.button_num_0.UseVisualStyleBackColor = false;
+            this.button_num_0.Click += new System.EventHandler(this.button_num_0_Click);
             // 
             // button_oper_change
             // 
@@ -498,6 +508,7 @@
             this.button_oper_change.Text = "ᐩ/₋";
             this.button_oper_change.UseCompatibleTextRendering = true;
             this.button_oper_change.UseVisualStyleBackColor = false;
+            this.button_oper_change.Click += new System.EventHandler(this.button_oper_change_Click);
             // 
             // button_num_1
             // 
@@ -517,6 +528,7 @@
             this.button_num_1.Text = "1";
             this.button_num_1.UseCompatibleTextRendering = true;
             this.button_num_1.UseVisualStyleBackColor = false;
+            this.button_num_1.Click += new System.EventHandler(this.button_num_1_Click);
             // 
             // button_num_4
             // 
@@ -536,6 +548,7 @@
             this.button_num_4.Text = "4";
             this.button_num_4.UseCompatibleTextRendering = true;
             this.button_num_4.UseVisualStyleBackColor = false;
+            this.button_num_4.Click += new System.EventHandler(this.button_num_4_Click);
             // 
             // button_num_7
             // 
@@ -555,6 +568,7 @@
             this.button_num_7.Text = "7";
             this.button_num_7.UseCompatibleTextRendering = true;
             this.button_num_7.UseVisualStyleBackColor = false;
+            this.button_num_7.Click += new System.EventHandler(this.button_num_7_Click);
             // 
             // button_num_2
             // 
@@ -574,6 +588,7 @@
             this.button_num_2.Text = "2";
             this.button_num_2.UseCompatibleTextRendering = true;
             this.button_num_2.UseVisualStyleBackColor = false;
+            this.button_num_2.Click += new System.EventHandler(this.button_num_2_Click);
             // 
             // button_num_5
             // 
@@ -593,6 +608,7 @@
             this.button_num_5.Text = "5";
             this.button_num_5.UseCompatibleTextRendering = true;
             this.button_num_5.UseVisualStyleBackColor = false;
+            this.button_num_5.Click += new System.EventHandler(this.button_num_5_Click);
             // 
             // button_num_8
             // 
@@ -612,6 +628,7 @@
             this.button_num_8.Text = "8";
             this.button_num_8.UseCompatibleTextRendering = true;
             this.button_num_8.UseVisualStyleBackColor = false;
+            this.button_num_8.Click += new System.EventHandler(this.button_num_8_Click);
             // 
             // button_num_3
             // 
@@ -631,6 +648,7 @@
             this.button_num_3.Text = "3";
             this.button_num_3.UseCompatibleTextRendering = true;
             this.button_num_3.UseVisualStyleBackColor = false;
+            this.button_num_3.Click += new System.EventHandler(this.button_num_3_Click);
             // 
             // button_num_6
             // 
@@ -650,6 +668,7 @@
             this.button_num_6.Text = "6";
             this.button_num_6.UseCompatibleTextRendering = true;
             this.button_num_6.UseVisualStyleBackColor = false;
+            this.button_num_6.Click += new System.EventHandler(this.button_num_6_Click);
             // 
             // button_num_9
             // 
@@ -669,6 +688,7 @@
             this.button_num_9.Text = "9";
             this.button_num_9.UseCompatibleTextRendering = true;
             this.button_num_9.UseVisualStyleBackColor = false;
+            this.button_num_9.Click += new System.EventHandler(this.button_num_9_Click);
             // 
             // button_oper_plus
             // 
@@ -687,6 +707,7 @@
             this.button_oper_plus.Text = "+";
             this.button_oper_plus.UseCompatibleTextRendering = true;
             this.button_oper_plus.UseVisualStyleBackColor = false;
+            this.button_oper_plus.Click += new System.EventHandler(this.button_oper_plus_Click);
             // 
             // button_oper_minus
             // 
@@ -705,6 +726,7 @@
             this.button_oper_minus.Text = "—";
             this.button_oper_minus.UseCompatibleTextRendering = true;
             this.button_oper_minus.UseVisualStyleBackColor = false;
+            this.button_oper_minus.Click += new System.EventHandler(this.button_oper_minus_Click);
             // 
             // button_oper_multiply
             // 
@@ -723,6 +745,7 @@
             this.button_oper_multiply.Text = "×";
             this.button_oper_multiply.UseCompatibleTextRendering = true;
             this.button_oper_multiply.UseVisualStyleBackColor = false;
+            this.button_oper_multiply.Click += new System.EventHandler(this.button_oper_multiply_Click);
             // 
             // button_oper_division
             // 
@@ -741,6 +764,7 @@
             this.button_oper_division.Text = "÷";
             this.button_oper_division.UseCompatibleTextRendering = true;
             this.button_oper_division.UseVisualStyleBackColor = false;
+            this.button_oper_division.Click += new System.EventHandler(this.button_oper_division_Click);
             // 
             // MemoryTable
             // 
@@ -783,6 +807,7 @@
             this.button_memory_minus.Text = "M-";
             this.button_memory_minus.UseCompatibleTextRendering = true;
             this.button_memory_minus.UseVisualStyleBackColor = true;
+            this.button_memory_minus.Click += new System.EventHandler(this.button_memory_minus_Click);
             // 
             // button_memory_plus
             // 
@@ -800,6 +825,7 @@
             this.button_memory_plus.Text = "M+";
             this.button_memory_plus.UseCompatibleTextRendering = true;
             this.button_memory_plus.UseVisualStyleBackColor = false;
+            this.button_memory_plus.Click += new System.EventHandler(this.button_memory_plus_Click);
             // 
             // button_memory_mr
             // 
@@ -816,6 +842,7 @@
             this.button_memory_mr.Text = "MR";
             this.button_memory_mr.UseCompatibleTextRendering = true;
             this.button_memory_mr.UseVisualStyleBackColor = true;
+            this.button_memory_mr.Click += new System.EventHandler(this.button_memory_mr_Click);
             // 
             // button_memory_mc
             // 
@@ -832,6 +859,7 @@
             this.button_memory_mc.Text = "MC";
             this.button_memory_mc.UseCompatibleTextRendering = true;
             this.button_memory_mc.UseVisualStyleBackColor = true;
+            this.button_memory_mc.Click += new System.EventHandler(this.button_memory_mc_Click);
             // 
             // button_memory_ms
             // 
@@ -848,6 +876,7 @@
             this.button_memory_ms.Text = "MS";
             this.button_memory_ms.UseCompatibleTextRendering = true;
             this.button_memory_ms.UseVisualStyleBackColor = true;
+            this.button_memory_ms.Click += new System.EventHandler(this.button_memory_ms_Click);
             // 
             // Colours
             // 
@@ -857,7 +886,7 @@
             this.ClientSize = new System.Drawing.Size(583, 517);
             this.Controls.Add(this.MemoryTable);
             this.Controls.Add(this.ButtonPanel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.background);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.saveButt);
             this.Controls.Add(this.label1);
@@ -877,12 +906,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.ColorDialog colorDialog2;
-        private System.Windows.Forms.ColorDialog colorDialog3;
+        private System.Windows.Forms.ColorDialog dialog_memory_mc;
+        private System.Windows.Forms.ColorDialog dialog_memory_mr;
+        private System.Windows.Forms.ColorDialog dialog_memory_plus;
         private System.Windows.Forms.Button saveButt;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button background;
         private System.Windows.Forms.TableLayoutPanel ButtonPanel;
         private System.Windows.Forms.Button button_oper_root2;
         private System.Windows.Forms.Button button_oper_power2;
@@ -918,36 +947,35 @@
         private System.Windows.Forms.Button button_memory_mr;
         private System.Windows.Forms.Button button_memory_mc;
         private System.Windows.Forms.Button button_memory_ms;
-        private System.Windows.Forms.ColorDialog colorDialog4;
-        private System.Windows.Forms.ColorDialog colorDialog5;
-        private System.Windows.Forms.ColorDialog colorDialog6;
-        private System.Windows.Forms.ColorDialog colorDialog7;
-        private System.Windows.Forms.ColorDialog colorDialog8;
-        private System.Windows.Forms.ColorDialog colorDialog9;
-        private System.Windows.Forms.ColorDialog colorDialog10;
-        private System.Windows.Forms.ColorDialog colorDialog11;
-        private System.Windows.Forms.ColorDialog colorDialog12;
-        private System.Windows.Forms.ColorDialog colorDialog13;
-        private System.Windows.Forms.ColorDialog colorDialog14;
-        private System.Windows.Forms.ColorDialog colorDialog15;
-        private System.Windows.Forms.ColorDialog colorDialog16;
-        private System.Windows.Forms.ColorDialog colorDialog17;
-        private System.Windows.Forms.ColorDialog colorDialog18;
-        private System.Windows.Forms.ColorDialog colorDialog19;
-        private System.Windows.Forms.ColorDialog colorDialog20;
-        private System.Windows.Forms.ColorDialog colorDialog21;
-        private System.Windows.Forms.ColorDialog colorDialog22;
-        private System.Windows.Forms.ColorDialog colorDialog23;
-        private System.Windows.Forms.ColorDialog colorDialog24;
-        private System.Windows.Forms.ColorDialog colorDialog25;
-        private System.Windows.Forms.ColorDialog colorDialog26;
-        private System.Windows.Forms.ColorDialog colorDialog27;
-        private System.Windows.Forms.ColorDialog colorDialog28;
-        private System.Windows.Forms.ColorDialog colorDialog29;
-        private System.Windows.Forms.ColorDialog colorDialog30;
-        private System.Windows.Forms.ColorDialog colorDialog31;
-        private System.Windows.Forms.ColorDialog colorDialog32;
-        private System.Windows.Forms.ColorDialog colorDialog33;
-        private System.Windows.Forms.ColorDialog colorDialog34;
+        private System.Windows.Forms.ColorDialog dialog_memory_minus;
+        private System.Windows.Forms.ColorDialog dialog_memory_ms;
+        private System.Windows.Forms.ColorDialog dialog_oper_percent;
+        private System.Windows.Forms.ColorDialog dialog_oper_ce;
+        private System.Windows.Forms.ColorDialog dialog_oper_del;
+        private System.Windows.Forms.ColorDialog dialog_oper_factorial;
+        private System.Windows.Forms.ColorDialog dialog_oper_power;
+        private System.Windows.Forms.ColorDialog dialog_oper_root;
+        private System.Windows.Forms.ColorDialog dialog_oper_abs;
+        private System.Windows.Forms.ColorDialog dialog_oper_fraction;
+        private System.Windows.Forms.ColorDialog dialog_oper_power2;
+        private System.Windows.Forms.ColorDialog dialog_oper_root2;
+        private System.Windows.Forms.ColorDialog dialog_oper_division;
+        private System.Windows.Forms.ColorDialog dialog_oper_multiply;
+        private System.Windows.Forms.ColorDialog dialog_oper_minus;
+        private System.Windows.Forms.ColorDialog dialog_oper_plus;
+        private System.Windows.Forms.ColorDialog dialog_oper_equal;
+        private System.Windows.Forms.ColorDialog dialog_oper_dot;
+        private System.Windows.Forms.ColorDialog dialog_oper_change;
+        private System.Windows.Forms.ColorDialog dialog_num_0;
+        private System.Windows.Forms.ColorDialog dialog_num_1;
+        private System.Windows.Forms.ColorDialog dialog_num_2;
+        private System.Windows.Forms.ColorDialog dialog_num_3;
+        private System.Windows.Forms.ColorDialog dialog_num_4;
+        private System.Windows.Forms.ColorDialog dialog_num_5;
+        private System.Windows.Forms.ColorDialog dialog_num_6;
+        private System.Windows.Forms.ColorDialog dialog_num_7;
+        private System.Windows.Forms.ColorDialog dialog_num_8;
+        private System.Windows.Forms.ColorDialog dialog_num_9;
+        private System.Windows.Forms.ColorDialog background_color;
     }
 }
