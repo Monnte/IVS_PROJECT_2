@@ -44,6 +44,11 @@ namespace IVS_Calculator
 
         InstantOperation[] definedInsantOperations = new InstantOperation[]{
             new InstantOperation(Keys.None,"x!",OwnMath.Factorial),
+            new InstantOperation(Keys.None,"%",OwnMath.percent),
+            new InstantOperation(Keys.None,"|x|",OwnMath.Abs),
+            new InstantOperation(Keys.None,"1/x",OwnMath.reverse),
+            new InstantOperation(Keys.None,"x²",OwnMath.square),
+            new InstantOperation(Keys.None,"²√x",OwnMath.sqrt),
         };
 
         Operation[] definedOperations = new Operation[] {
@@ -79,12 +84,14 @@ namespace IVS_Calculator
 
             InitializeComponent();
             //File.WriteAllText(configfile, "\"  \" pako :D\"");
+            if(File.Exists(configfile))
             loadConfig();
             //InsertText(((Button)Controls.Find("Button1", true).First<Control>()).BackColor.ToString());
         }
 
         public void loadConfig()
         {
+            File.WriteAllText(configfile, "button_num: = ");
             string[] configLines = File.ReadAllLines(configfile);
             foreach (string line in configLines)
             {
@@ -94,8 +101,10 @@ namespace IVS_Calculator
                 if (!config[1].Contains("=")) continue;
                 config.AddRange(config[1].Split('='));
                 config.RemoveAt(1);
-                Control[] found = Controls.Find(config[0].Trim(' ', '"'), true);
-                if (found.Length == 0) continue;
+                // Control[] found = FindControls(Controls.Cast<Control>(),config[0].Trim(' ', '"'));
+                IEnumerable<Control> found = GetAll(this, config[0].Trim(' ', '"'));
+                //InsertText(found.Count().ToString()); 
+                if (found.Count() == 0) continue;
                 foreach (Control con in found)
                 {
                     if (config[1].Trim(' ', '"') == "BackColor")
@@ -103,6 +112,15 @@ namespace IVS_Calculator
                 }
 
             }
+        }
+
+        public IEnumerable<Control> GetAll(Control control, string name)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, name))
+                                      .Concat(controls)
+                                      .Where(c => c.Name.Contains(name));
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -278,6 +296,17 @@ namespace IVS_Calculator
             {
                 if (definedOperations[i].buttonChar == operationClicked)
                     InsertOperator((Operators)i);
+            }
+            for (int i = 0; i < definedInsantOperations.Length; i++)
+            {
+                if (definedInsantOperations[i].buttonChar == operationClicked)
+                {
+                    if (UserInput.Text != string.Empty)
+                        UserInput.Text = definedInsantOperations[i].function(Double.Parse(UserInput.Text)).ToString();
+                    else
+                        UserInput.Text = definedInsantOperations[i].function(0).ToString();
+                }
+
             }
 
             //Button b = (Button)sender;

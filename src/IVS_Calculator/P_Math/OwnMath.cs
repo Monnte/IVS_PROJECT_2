@@ -15,6 +15,22 @@ namespace P_Math
     {
         private static double mem = 0; /*!< Variable where answers are saved to memory*/
 
+
+        public static double percent(double x)
+        {
+            return x/100;
+        }
+
+        public static double reverse(double x)
+        {
+            return 1 / x;
+        }
+
+        public static double square(double x)
+        {
+            return pow(x, 2);
+        }
+
         /**
         * @brief Add two numbers , double and double
         * 
