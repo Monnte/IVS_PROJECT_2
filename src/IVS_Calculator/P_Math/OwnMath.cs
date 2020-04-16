@@ -1,11 +1,11 @@
-﻿﻿/**
- * @file OwnMath.cs
- * @author Eduard Frlička
- * @date 2020-04-04
- * 
- * @copyright Copyright (c) 2019
- * 
- */
+﻿/**
+* @file OwnMath.cs
+* @author Eduard Frlička
+* @date 2020-04-04
+* 
+* @copyright Copyright (c) 2019
+* 
+*/
 using System;
 
 namespace P_Math
@@ -43,6 +43,11 @@ namespace P_Math
         public static double add(double a, int b)
         {
             return a + b;
+        }
+
+        public static double sub(double a, double b)
+        {
+            return a - b;
         }
 
         /**
@@ -103,6 +108,8 @@ namespace P_Math
 
         public static double div(double a, double b)
         {
+            if (b == 0) throw new Exception("Delis nulou vole :/");
+
             return a / b;
         }
 
@@ -119,6 +126,8 @@ namespace P_Math
 
         public static double div(double a, int b)
         {
+            if (b == 0) throw new Exception("Delis nulou vole :/");
+
             return a / (double)b;
         }
 
@@ -135,6 +144,8 @@ namespace P_Math
 
         public static double div(int a, double b)
         {
+            if (b == 0) throw new Exception("Delis nulou vole :/");
+
             return a / b;
         }
 
@@ -151,6 +162,8 @@ namespace P_Math
 
         public static double div(int a, int b)
         {
+            if (b == 0) throw new Exception("Delis nulou vole :/");
+
             return (double)a / (double)b;
         }
 
@@ -167,6 +180,7 @@ namespace P_Math
 
         public static int divInt(int a, int b)
         {
+            if (b == 0) throw new Exception("Delis nulou vole :/");
             return a / b;
         }
 
@@ -225,10 +239,17 @@ namespace P_Math
         * @param n Number  >= 0
         * @return Factorial of number "n" 
         */
-        public static int Factorial(int n)
+
+        public static double Factorial(double n)
+        {
+            if (n >= 0)
+            return Factorial((uint)n);
+            return 0;
+        }
+        public static uint Factorial(uint n)
         {
             if (n == 0) return 1;
-            int result = n;
+            uint result = n;
             while (--n > 0)
             {
                 result *= n;
@@ -392,7 +413,7 @@ namespace P_Math
         */
         public static double round(double x, int decimalPlace = 1)
         {
-            return Math.Round(x);
+            return Math.Round(x, decimalPlace);
 
         }
 
@@ -448,11 +469,21 @@ namespace P_Math
         /**
         * @return zero
         */
-        public static double root()
+        public static double sqrt(double x)
         {
-            return 0;
+            if (x < 0) throw new Exception("Ty pako, odmocnina zo zapornych cisel neje :D");
+            return Math.Sqrt(x);
         }
 
+        public static double root(double x, int power)
+        {
+            return pow(x, 1 / (double)power);
+        }
+
+        public static double root(double x, double power)
+        {
+            return pow(x, 1 / power);
+        }
     }
 
 }

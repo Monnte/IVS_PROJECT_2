@@ -8,20 +8,114 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using P_Math;
+using System.IO;
 
 namespace IVS_Calculator
 {
     public partial class Calculator : Form
     {
-        enum Operators { add, sub, mul, div }
+        public class Operation
+        {
+            public Operation(Keys Key, string buttonChar, string outchar, Func<double, double, double> function)
+            {
+                this.Key = Key;
+                this.buttonChar = buttonChar;
+                this.outchar = outchar;
+                this.function = function;
+            }
+            public Keys Key;
+            public string buttonChar;
+            public string outchar;
+            public Func<double, double, double> function;
+        }
+
+        public class InstantOperation
+        {
+            public InstantOperation(Keys Key, string buttonChar,  Func<double, double> function)
+            {
+                this.Key = Key;
+                this.buttonChar = buttonChar;
+                this.function = function;
+            }
+            public Keys Key;
+            public string buttonChar;
+            public Func<double, double> function;
+        }
+
+        InstantOperation[] definedInsantOperations = new InstantOperation[]{
+            new InstantOperation(Keys.None,"x!",OwnMath.Factorial),
+        };
+
+        Operation[] definedOperations = new Operation[] {
+        new Operation(Keys.Add,"+","+",OwnMath.add),
+        new Operation(Keys.Add,"—","-",OwnMath.sub),
+        new Operation(Keys.Add,"x","*",OwnMath.mul),
+        new Operation(Keys.Add,"÷","/",OwnMath.div),
+        new Operation(Keys.None,"xⁿ","^",OwnMath.pow),
+        new Operation(Keys.None,"ⁿ√x","√",OwnMath.root),
+        };
+        enum Operators { add, sub, mul, div, pow, root }
+        //string[] instantOperatorsChars = new string[] { "x!", "xⁿ", "|x|", "1/x", "x²", "²√x", };
+        string configfile = ".conf";
+        List<double> numbers = new List<double>();
+        List<Operators> operations = new List<Operators>();
+        bool calculated = false;
         //used for CalculationBox
-        Double result = 0;
-        String operation = "";
+        //Double result = 0;
+        //String operation = "";
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         #region Constructor
         public Calculator()
         {
+
+
+            //functions.Add(OwnMath.add);
+            //functions.Add(OwnMath.sub);
+            //functions.Add(OwnMath.mul);
+            //functions.Add(OwnMath.div);
+            //functions.Add(OwnMath.pow);
+            //functions.Add(OwnMath.root);
+
+
             InitializeComponent();
+            //File.WriteAllText(configfile, "\"  \" pako :D\"");
+            loadConfig();
+            //InsertText(((Button)Controls.Find("Button1", true).First<Control>()).BackColor.ToString());
+        }
+
+        public void loadConfig()
+        {
+            string[] configLines = File.ReadAllLines(configfile);
+            foreach (string line in configLines)
+            {
+                //InsertText(line.Trim(' ', '"'));
+                if (!line.Contains(":")) continue;
+                List<string> config = line.Split(':').ToList<string>();
+                if (!config[1].Contains("=")) continue;
+                config.AddRange(config[1].Split('='));
+                config.RemoveAt(1);
+                Control[] found = Controls.Find(config[0].Trim(' ', '"'), true);
+                if (found.Length == 0) continue;
+                foreach (Control con in found)
+                {
+                    if (config[1].Trim(' ', '"') == "BackColor")
+                        con.BackColor = Color.FromArgb(int.Parse(config[2].Trim(' ', '"')));
+                }
+
+            }
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Return)
+            {
+                CalculateEqutation();
+                return true;
+            }
+            else
+            {
+                return base.ProcessCmdKey(ref msg, keyData);
+            }
         }
 
         #endregion
@@ -29,19 +123,26 @@ namespace IVS_Calculator
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         #region Operators
 
-        private void ButtonDivision_Click(object sender, EventArgs e)
-        {
-            InsertText("÷");
-        }
-
+        //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        //{
+        //    if ((this.ActiveControl == myTextBox) && (keyData == Keys.Return))
+        //    {
+        //        //do something
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return base.ProcessCmdKey(ref msg, keyData);
+        //    }
+        //}
         private void ButtonRoot_Click(object sender, EventArgs e)
         {
-            InsertText("ⁿ√x");
+            InsertOperator(Operators.root);
         }
 
         private void ButtonPower_Click(object sender, EventArgs e)
         {
-            InsertText("^");
+            InsertOperator(Operators.pow);
         }
 
         private void ButtonFactorial_Click(object sender, EventArgs e)
@@ -49,29 +150,16 @@ namespace IVS_Calculator
             InsertText("!");
         }
 
-        private void ButtonMultiply_Click(object sender, EventArgs e)
-        {
-            InsertText("×");
-        }
-
-        private void ButtonMinus_Click(object sender, EventArgs e)
-        {
-            InsertText("-");
-        }
-
-        private void ButtonPlus_Click(object sender, EventArgs e)
-        {
-            InsertText("+");
-        }
 
         private void ButtonPercent_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void ButtonChange_Click(object sender, EventArgs e)
         {
-            if (this.UserInput.Text.Contains("-")) {
+            if (this.UserInput.Text.Contains("-"))
+            {
                 this.UserInput.Text = this.UserInput.Text.Remove(0, 1);
             }
             else
@@ -82,13 +170,9 @@ namespace IVS_Calculator
 
         private void ButtonDot_Click(object sender, EventArgs e)
         {
-
-            if (!this.UserInput.Text.Contains(".")) { 
-                this.UserInput.Text = this.UserInput.Text + ".";
-            }
-            else
+            if (!this.UserInput.Text.Contains("."))
             {
-                this.UserInput.Text = this.UserInput.Text;
+                this.UserInput.Text = this.UserInput.Text + ".";
             }
         }
 
@@ -130,7 +214,7 @@ namespace IVS_Calculator
         private void Button5_Click(object sender, EventArgs e)
         {
             InsertText("5");
-            
+
         }
 
         private void Button6_Click(object sender, EventArgs e)
@@ -160,7 +244,7 @@ namespace IVS_Calculator
         private void ButtonDel_Click(object sender, EventArgs e)
         {
             //Deletes always last char
-            DeleteLast();  
+            DeleteLast();
         }
 
         /// <summary>
@@ -189,20 +273,29 @@ namespace IVS_Calculator
         //after clicking operation the value and operator is transfered to CalculationBox
         private void OperationsOnClick(object sender, EventArgs e)
         {
-            Button b = (Button)sender;
+            string operationClicked = ((Button)sender).Text;
+            for (int i = 0; i < definedOperations.Length; i++)
+            {
+                if (definedOperations[i].buttonChar == operationClicked)
+                    InsertOperator((Operators)i);
+            }
 
-            if (UserInput.Text == string.Empty)
-            {
-                operation = b.Text;
-                CalculationBox.Text = result + " " + operation;
-            }
-            else
-            {
-                operation = b.Text;
-                result = Double.Parse(UserInput.Text);
-                UserInput.Text = string.Empty;
-                CalculationBox.Text = System.Convert.ToString(result) + " " + operation;
-            }
+            //Button b = (Button)sender;
+
+
+
+            //if (UserInput.Text == string.Empty)
+            //{
+            //    operation = b.Text;
+            //    CalculationBox.Text = result + " " + operation;
+            //}
+            //else
+            //{
+            //    operation = b.Text;
+            //    result = Double.Parse(UserInput.Text);
+            //    UserInput.Text = string.Empty;
+            //    CalculationBox.Text = System.Convert.ToString(result) + " " + operation;
+            //}
         }
         #endregion
 
@@ -210,27 +303,27 @@ namespace IVS_Calculator
         #region Memory_Buttons
         private void ButtonMC_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void ButtonMR_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void ButtonMemoryPlus_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void ButtonMemoryminus_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void ButtonMS_Click(object sender, EventArgs e)
         {
-            
+
         }
         #endregion
 
@@ -245,15 +338,69 @@ namespace IVS_Calculator
         /// <summary>
         /// Takes string and places it on position of cursor
         /// </summary>
+        /// 
+
+
+
         private void InsertText(string value)
         {
             //input new text
-            this.UserInput.Text = this.UserInput.Text.Insert(this.UserInput.Text.Length, value);
+            if (calculated)
+            {
+                this.UserInput.Text = string.Empty;
+                calculated = false;
+            }
+            this.UserInput.Text = UserInput.Text + value;
+        }
+
+        private void Rewrite()
+        {
+            CalculationBox.Text = string.Empty;
+            for (int i = 0; i < operations.Count; i++)
+            {
+                switch (operations[i])
+                {
+                    case Operators.root:
+                        if (i + 1 < numbers.Count)
+                        {
+                            CalculationBox.Text += numbers[i + 1] + " √ " + numbers[i];
+                            if (++i < operations.Count)
+                                CalculationBox.Text += " " + definedOperations[(int)operations[i]].outchar + " ";
+                        }
+                        else
+                            CalculationBox.Text += "√" + numbers[i];
+                        break;
+                    default:
+                        CalculationBox.Text += numbers[i].ToString() + " " + definedOperations[(int)operations[i]].outchar + " ";
+                        break;
+                }
+            }
         }
 
         private void InsertOperator(Operators value)
         {
-            InsertText(value.ToString());
+            if (UserInput.Text != string.Empty)
+                numbers.Add(Double.Parse(UserInput.Text));
+            else
+            {
+                if (operations.Count > 0)
+                    operations.RemoveAt(operations.Count - 1);
+                else
+                    numbers.Add(0);
+            }
+            operations.Add(value);
+            Rewrite();
+            UserInput.Text = string.Empty;
+            //InsertText(value.ToString());
+        }
+
+        private void Calculate()
+        {
+            int index = operations.IndexOf(operations.Max<Operators>());
+            numbers[index] = definedOperations[(int)operations[index]].function(numbers[index], numbers[index + 1]);
+            operations.RemoveAt(index);
+            numbers.RemoveAt(index + 1);
+            //fact, sqr, sqrt, %, 1/x, 
         }
 
         private void DeleteText()
@@ -274,7 +421,23 @@ namespace IVS_Calculator
 
         private void CalculateEqutation()
         {
-
+            if (UserInput.Text != string.Empty)
+                numbers.Add(Double.Parse(UserInput.Text));
+            else
+            {
+                if (operations.Count > 0)
+                    operations.RemoveAt(operations.Count - 1);
+                else
+                    numbers.Add(0);
+            }
+            while (operations.Count > 0)
+                Calculate();
+            DeleteText();
+            Rewrite();
+            InsertText(numbers[0].ToString());
+            calculated = true;
+            operations.Clear();
+            numbers.Clear();
         }
 
         private void UserInput_KeyPress(object sender, KeyPressEventArgs e)
@@ -298,59 +461,94 @@ namespace IVS_Calculator
 
         private void Calculator_KeyDown(object sender, KeyEventArgs e)
         {
-
-            switch (e.KeyValue)
+            switch (e.KeyCode)
             {
-                case 8:
+                case Keys.Back:
                     DeleteLast();
                     break;
-                case 46:
+                case Keys.Delete:
                     DeleteText();
                     break;
-                case 96:
+                case Keys.D0:
                     InsertText("0");
                     break;
-                case 97:
+                case Keys.D1:
                     InsertText("1");
                     break;
-                case 98:
+                case Keys.D2:
                     InsertText("2");
                     break;
-                case 99:
+                case Keys.D3:
                     InsertText("3");
                     break;
-                case 100:
+                case Keys.D4:
                     InsertText("4");
                     break;
-                case 101:
+                case Keys.D5:
                     InsertText("5");
                     break;
-                case 102:
+                case Keys.D6:
                     InsertText("6");
                     break;
-                case 103:
+                case Keys.D7:
                     InsertText("7");
                     break;
-                case 104:
+                case Keys.D8:
                     InsertText("8");
                     break;
-                case 105:
+                case Keys.D9:
                     InsertText("9");
                     break;
-                case 111:
+                case Keys.NumPad0:
+                    InsertText("0");
+                    break;
+                case Keys.NumPad1:
+                    InsertText("1");
+                    break;
+                case Keys.NumPad2:
+                    InsertText("2");
+                    break;
+                case Keys.NumPad3:
+                    InsertText("3");
+                    break;
+                case Keys.NumPad4:
+                    InsertText("4");
+                    break;
+                case Keys.NumPad5:
+                    InsertText("5");
+                    break;
+                case Keys.NumPad6:
+                    InsertText("6");
+                    break;
+                case Keys.NumPad7:
+                    InsertText("7");
+                    break;
+                case Keys.NumPad8:
+                    InsertText("8");
+                    break;
+                case Keys.NumPad9:
+                    InsertText("9");
+                    break;
+                case Keys.Divide:
                     InsertOperator(Operators.div);
                     break;
-                case 106:
+                case Keys.Multiply:
                     InsertOperator(Operators.mul);
                     break;
-                case 109:
+                case Keys.Subtract:
                     InsertOperator(Operators.sub);
                     break;
-                case 107:
+                case Keys.Add:
                     InsertOperator(Operators.add);
                     break;
+                case Keys.Decimal:
+                    if (!this.UserInput.Text.Contains("."))
+                    {
+                        this.UserInput.Text = this.UserInput.Text + ".";
+                    }
+                    break;
                 default:
-                    InsertText(e.KeyValue.ToString());
+                    //InsertText(e.KeyCode.ToString());
                     break;
             }
         }
@@ -361,16 +559,19 @@ namespace IVS_Calculator
             about.Show();
         }
 
+        private void coloursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var colours = new Colours();
+            colours.Show();
+
+        }
+
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var help = new Help();
             help.Show();
         }
 
-        private void coloursToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var colours = new Colours();
-            colours.Show();
-        }
+
     }
 }
