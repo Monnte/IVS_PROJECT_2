@@ -264,5 +264,6 @@ namespace IVS_Calculator
         {
             saveSettings();
         }
+
     }
 }
