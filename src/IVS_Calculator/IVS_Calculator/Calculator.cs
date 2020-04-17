@@ -91,7 +91,8 @@ namespace IVS_Calculator
 
         public void loadConfig()
         {
-            File.WriteAllText(configfile, "button_num: = ");
+            //File.WriteAllText(configfile, "button_num: = ");
+            if (!File.Exists(configfile)) return;
             string[] configLines = File.ReadAllLines(configfile);
             foreach (string line in configLines)
             {
@@ -107,8 +108,10 @@ namespace IVS_Calculator
                 if (found.Count() == 0) continue;
                 foreach (Control con in found)
                 {
-                    if (config[1].Trim(' ', '"') == "BackColor")
+                    if (config[1].Trim(' ', '"') == "backColor")
                         con.BackColor = Color.FromArgb(int.Parse(config[2].Trim(' ', '"')));
+                    if (config[1].Trim(' ', '"') == "fontColor")
+                        con.ForeColor = Color.FromArgb(int.Parse(config[2].Trim(' ', '"')));
                 }
 
             }
@@ -490,6 +493,7 @@ namespace IVS_Calculator
 
         private void Calculator_KeyDown(object sender, KeyEventArgs e)
         {
+            configfile.Replace(',', '.');
             switch (e.KeyCode)
             {
                 case Keys.Back:
@@ -590,8 +594,12 @@ namespace IVS_Calculator
 
         private void coloursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var colours = new Colours();
-            colours.Show();
+
+            var colours = new Colours(configfile);
+            colours.configfile = configfile;
+            
+            colours.ShowDialog();
+            loadConfig();
 
         }
 

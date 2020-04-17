@@ -35,8 +35,8 @@
             this.button_oper_power2 = new System.Windows.Forms.Button();
             this.button_oper_fraction = new System.Windows.Forms.Button();
             this.button_oper_abs = new System.Windows.Forms.Button();
-            this.button_oper_root = new System.Windows.Forms.Button();
-            this.button_oper_power = new System.Windows.Forms.Button();
+            this.button_oper_root1 = new System.Windows.Forms.Button();
+            this.button_oper_power1 = new System.Windows.Forms.Button();
             this.button_oper_factorial = new System.Windows.Forms.Button();
             this.button_oper_del = new System.Windows.Forms.Button();
             this.button_oper_c = new System.Windows.Forms.Button();
@@ -113,8 +113,8 @@
             this.ButtonPanel.Controls.Add(this.button_oper_power2, 1, 2);
             this.ButtonPanel.Controls.Add(this.button_oper_fraction, 0, 2);
             this.ButtonPanel.Controls.Add(this.button_oper_abs, 3, 1);
-            this.ButtonPanel.Controls.Add(this.button_oper_root, 2, 1);
-            this.ButtonPanel.Controls.Add(this.button_oper_power, 1, 1);
+            this.ButtonPanel.Controls.Add(this.button_oper_root1, 2, 1);
+            this.ButtonPanel.Controls.Add(this.button_oper_power1, 1, 1);
             this.ButtonPanel.Controls.Add(this.button_oper_factorial, 0, 1);
             this.ButtonPanel.Controls.Add(this.button_oper_del, 3, 0);
             this.ButtonPanel.Controls.Add(this.button_oper_c, 2, 0);
@@ -231,45 +231,45 @@
             this.button_oper_abs.UseVisualStyleBackColor = false;
             this.button_oper_abs.Click += new System.EventHandler(this.OperationsOnClick);
             // 
-            // button_oper_root
+            // button_oper_root1
             // 
-            this.button_oper_root.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_oper_root.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_oper_root.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.button_oper_root.FlatAppearance.BorderSize = 0;
-            this.button_oper_root.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_oper_root.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_oper_root.ForeColor = System.Drawing.Color.White;
-            this.button_oper_root.Location = new System.Drawing.Point(228, 71);
-            this.button_oper_root.Margin = new System.Windows.Forms.Padding(2);
-            this.button_oper_root.Name = "button_oper_root";
-            this.button_oper_root.Size = new System.Drawing.Size(109, 65);
-            this.button_oper_root.TabIndex = 6;
-            this.button_oper_root.Text = "ⁿ√x";
-            this.button_oper_root.UseCompatibleTextRendering = true;
-            this.button_oper_root.UseVisualStyleBackColor = false;
-            this.button_oper_root.Click += new System.EventHandler(this.ButtonRoot_Click);
-            this.button_oper_root.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
+            this.button_oper_root1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_oper_root1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_oper_root1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.button_oper_root1.FlatAppearance.BorderSize = 0;
+            this.button_oper_root1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_oper_root1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_oper_root1.ForeColor = System.Drawing.Color.White;
+            this.button_oper_root1.Location = new System.Drawing.Point(228, 71);
+            this.button_oper_root1.Margin = new System.Windows.Forms.Padding(2);
+            this.button_oper_root1.Name = "button_oper_root1";
+            this.button_oper_root1.Size = new System.Drawing.Size(109, 65);
+            this.button_oper_root1.TabIndex = 6;
+            this.button_oper_root1.Text = "ⁿ√x";
+            this.button_oper_root1.UseCompatibleTextRendering = true;
+            this.button_oper_root1.UseVisualStyleBackColor = false;
+            this.button_oper_root1.Click += new System.EventHandler(this.ButtonRoot_Click);
+            this.button_oper_root1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
-            // button_oper_power
+            // button_oper_power1
             // 
-            this.button_oper_power.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_oper_power.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_oper_power.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.button_oper_power.FlatAppearance.BorderSize = 0;
-            this.button_oper_power.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_oper_power.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_oper_power.ForeColor = System.Drawing.Color.White;
-            this.button_oper_power.Location = new System.Drawing.Point(115, 71);
-            this.button_oper_power.Margin = new System.Windows.Forms.Padding(2);
-            this.button_oper_power.Name = "button_oper_power";
-            this.button_oper_power.Size = new System.Drawing.Size(109, 65);
-            this.button_oper_power.TabIndex = 5;
-            this.button_oper_power.Text = "xⁿ";
-            this.button_oper_power.UseCompatibleTextRendering = true;
-            this.button_oper_power.UseVisualStyleBackColor = false;
-            this.button_oper_power.Click += new System.EventHandler(this.ButtonPower_Click);
-            this.button_oper_power.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
+            this.button_oper_power1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_oper_power1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_oper_power1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.button_oper_power1.FlatAppearance.BorderSize = 0;
+            this.button_oper_power1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_oper_power1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_oper_power1.ForeColor = System.Drawing.Color.White;
+            this.button_oper_power1.Location = new System.Drawing.Point(115, 71);
+            this.button_oper_power1.Margin = new System.Windows.Forms.Padding(2);
+            this.button_oper_power1.Name = "button_oper_power1";
+            this.button_oper_power1.Size = new System.Drawing.Size(109, 65);
+            this.button_oper_power1.TabIndex = 5;
+            this.button_oper_power1.Text = "xⁿ";
+            this.button_oper_power1.UseCompatibleTextRendering = true;
+            this.button_oper_power1.UseVisualStyleBackColor = false;
+            this.button_oper_power1.Click += new System.EventHandler(this.ButtonPower_Click);
+            this.button_oper_power1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // button_oper_factorial
             // 
@@ -977,8 +977,8 @@
         private System.Windows.Forms.Button button_num_8;
         private System.Windows.Forms.Button button_num_7;
         private System.Windows.Forms.Button button_oper_division;
-        private System.Windows.Forms.Button button_oper_root;
-        private System.Windows.Forms.Button button_oper_power;
+        private System.Windows.Forms.Button button_oper_root1;
+        private System.Windows.Forms.Button button_oper_power1;
         private System.Windows.Forms.Button button_oper_factorial;
         private System.Windows.Forms.Button button_oper_del;
         private System.Windows.Forms.Button button_oper_c;
