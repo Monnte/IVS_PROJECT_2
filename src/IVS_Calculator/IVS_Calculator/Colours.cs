@@ -53,10 +53,10 @@ namespace IVS_Calculator
         }
         public void loadConfig()
         {
-            //File.WriteAllText(configfile, "button_num: = ");
-            string[] configLines = File.ReadAllLines(configfile);
+            if (!File.Exists(configfile)) return;
+                string[] configLines = File.ReadAllLines(configfile);
             loadSettings(configLines.ToList());
-            
+
         }
         private void loadSettings(List<string> settings)
         {

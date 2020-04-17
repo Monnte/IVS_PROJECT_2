@@ -54,7 +54,7 @@ namespace IVS_Calculator
         Operation[] definedOperations = new Operation[] {
         new Operation(Keys.Add,"+","+",OwnMath.add),
         new Operation(Keys.Add,"—","-",OwnMath.sub),
-        new Operation(Keys.Add,"x","*",OwnMath.mul),
+        new Operation(Keys.Add,"×","*",OwnMath.mul),
         new Operation(Keys.Add,"÷","/",OwnMath.div),
         new Operation(Keys.None,"xⁿ","^",OwnMath.pow),
         new Operation(Keys.None,"ⁿ√x","√",OwnMath.root),
