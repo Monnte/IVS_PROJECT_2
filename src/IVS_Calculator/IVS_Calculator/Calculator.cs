@@ -31,7 +31,7 @@ namespace IVS_Calculator
 
         public class InstantOperation
         {
-            public InstantOperation(Keys Key, string buttonChar,  Func<double, double> function)
+            public InstantOperation(Keys Key, string buttonChar, Func<double, double> function)
             {
                 this.Key = Key;
                 this.buttonChar = buttonChar;
@@ -84,8 +84,8 @@ namespace IVS_Calculator
 
             InitializeComponent();
             //File.WriteAllText(configfile, "\"  \" pako :D\"");
-            if(File.Exists(configfile))
-            loadConfig();
+            if (File.Exists(configfile))
+                loadConfig();
             //InsertText(((Button)Controls.Find("Button1", true).First<Control>()).BackColor.ToString());
         }
 
@@ -102,6 +102,13 @@ namespace IVS_Calculator
                 if (!config[1].Contains("=")) continue;
                 config.AddRange(config[1].Split('='));
                 config.RemoveAt(1);
+                if (config[0] == "Calculator")
+                {
+                    if (config[1].Trim(' ', '"') == "backColor")
+                        this.BackColor = Color.FromArgb(int.Parse(config[2].Trim(' ', '"')));
+                    if (config[1].Trim(' ', '"') == "fontColor")
+                        this.ForeColor = Color.FromArgb(int.Parse(config[2].Trim(' ', '"')));
+                }
                 // Control[] found = FindControls(Controls.Cast<Control>(),config[0].Trim(' ', '"'));
                 IEnumerable<Control> found = GetAll(this, config[0].Trim(' ', '"'));
                 //InsertText(found.Count().ToString()); 
@@ -308,6 +315,7 @@ namespace IVS_Calculator
                         UserInput.Text = definedInsantOperations[i].function(Double.Parse(UserInput.Text)).ToString();
                     else
                         UserInput.Text = definedInsantOperations[i].function(0).ToString();
+                    calculated = true;
                 }
 
             }
@@ -597,7 +605,7 @@ namespace IVS_Calculator
 
             var colours = new Colours(configfile);
             colours.configfile = configfile;
-            
+
             colours.ShowDialog();
             loadConfig();
 

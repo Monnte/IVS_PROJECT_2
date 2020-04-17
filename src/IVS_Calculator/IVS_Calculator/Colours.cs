@@ -67,6 +67,13 @@ namespace IVS_Calculator
                 if (!config[1].Contains("=")) continue;
                 config.AddRange(config[1].Split('='));
                 config.RemoveAt(1);
+                if (config[0] == "Calculator")
+                {
+                    if (config[1].Trim(' ', '"') == "backColor")
+                        this.BackColor = Color.FromArgb(int.Parse(config[2].Trim(' ', '"')));
+                    if (config[1].Trim(' ', '"') == "fontColor")
+                        this.ForeColor = Color.FromArgb(int.Parse(config[2].Trim(' ', '"')));
+                }
                 IEnumerable<Control> found = GetAll(this, config[0].Trim(' ', '"'));
                 if (found.Count() == 0) continue;
                 foreach (Control con in found)
@@ -237,7 +244,7 @@ namespace IVS_Calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            changeColor(((Button)sender).Name);
+            changeColor("Calculator");
         }
 
         private void button_oper_percent_Click(object sender, EventArgs e)
@@ -265,5 +272,20 @@ namespace IVS_Calculator
             saveSettings();
         }
 
+        private void all_operators_Click(object sender, EventArgs e)
+        {
+            changeColor("button_oper");
+        }
+
+        private void all_numbers_Click(object sender, EventArgs e)
+        {
+            changeColor("button_num");
+        }
+
+        private void reset_default_Click(object sender, EventArgs e)
+        {
+            settings.Clear();
+            loadSettings(settings);
+        }
     }
 }
