@@ -887,6 +887,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Colours";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Colours";
             this.ButtonPanel.ResumeLayout(false);
             this.MemoryTable.ResumeLayout(false);

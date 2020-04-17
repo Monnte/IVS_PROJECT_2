@@ -100,6 +100,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(375, 247);
             this.Name = "Help";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Help";
             this.ResumeLayout(false);
             this.PerformLayout();
