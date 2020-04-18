@@ -65,9 +65,7 @@ namespace IVS_Calculator
         List<double> numbers = new List<double>();
         List<Operators> operations = new List<Operators>();
         bool calculated = false;
-        //used for CalculationBox
-        //Double result = 0;
-        //String operation = "";
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         #region Constructor
         public Calculator()
@@ -298,7 +296,6 @@ namespace IVS_Calculator
         }
 
         //after clicking operation the value and operator is transfered to CalculationBox
-        //after clicking operation the value and operator is transfered to CalculationBox
         private void OperationsOnClick(object sender, EventArgs e)
         {
             string operationClicked = ((Button)sender).Text;
@@ -378,10 +375,6 @@ namespace IVS_Calculator
         /// <summary>
         /// Takes string and places it on position of cursor
         /// </summary>
-        /// 
-
-
-
         private void InsertText(string value)
         {
             //input new text
