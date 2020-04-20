@@ -45,7 +45,6 @@ namespace IVS_Calculator
 
         InstantOperation[] definedInsantOperations = new InstantOperation[]{
             new InstantOperation(Keys.None,"x!",OwnMath.Factorial),
-            new InstantOperation(Keys.None,"%",OwnMath.percent),
             new InstantOperation(Keys.None,"|x|",OwnMath.Abs),
             new InstantOperation(Keys.None,"1/x",OwnMath.reverse),
             new InstantOperation(Keys.None,"x²",OwnMath.square),

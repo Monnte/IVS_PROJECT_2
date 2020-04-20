@@ -1,3 +1,12 @@
+/**
+* @file Math_Tests.cs
+* @author Jakub Vaòo
+* @date 8-4-2020
+* 
+* @copyright Copyright (c) 2019
+* 
+*/
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using P_Math;
 using System;
@@ -7,6 +16,9 @@ namespace P_Math_Tests
     [TestClass]
     public class Math_Tests
     {
+        /**
+        * @brief Tests Add function
+        */
         [TestMethod]
         public void AddTest()
         {
@@ -29,26 +41,20 @@ namespace P_Math_Tests
 
         }
 
+        /**
+        * @brief Tests Sub function
+        */
         [TestMethod]
         public void SubTest()
         {
-            //check sub(int a, int b)
-            //Assert.AreEqual(10, OwnMath.sub(15, 5));
-            //Assert.AreEqual(-10, OwnMath.sub(-15, -5));
-            //Assert.AreEqual(10, OwnMath.sub(10, 0));
-            //Assert.AreEqual(-10, OwnMath.sub(0, 10));
-
-            ////check sub(double a, int b)
-            //Assert.AreEqual(10.5, OwnMath.sub(15.5, 5));
-            //Assert.AreEqual(-10.5, OwnMath.sub(-15.5, -5));
-            //Assert.AreEqual(10.5, OwnMath.sub(10.5, 0));
-            //Assert.AreEqual(-10.5, OwnMath.sub(-10.5, 0));
-
-            ////check sub(double a, double b)
-            //Assert.AreEqual(10, OwnMath.sub(15.5, 5.5));
-            //Assert.AreEqual(-10, OwnMath.sub(-15.5, -5.5));
+            //check sub(double a, double b)
+            Assert.AreEqual(10, OwnMath.sub(15.5, 5.5));
+            Assert.AreEqual(-10, OwnMath.sub(-15.5, -5.5));
         }
 
+        /**
+        * @brief Tests Mul function
+        */
         [TestMethod]
         public void MulTest()
         {
@@ -67,6 +73,9 @@ namespace P_Math_Tests
             Assert.AreEqual(-30.25, OwnMath.mul(-5.5, 5.5));
         }
 
+        /**
+        * @brief Tests Div function
+        */
         [TestMethod]
         public void DivTest()
         {
@@ -74,19 +83,18 @@ namespace P_Math_Tests
             Assert.AreEqual(5, OwnMath.div(10, 2));
             Assert.AreEqual(-5, OwnMath.div(-10, 2));
             Assert.AreEqual(0, OwnMath.div(0, 2));
-            Assert.AreEqual(double.PositiveInfinity, OwnMath.div(2, 0));
+            Assert.ThrowsException<Exception>(() => (OwnMath.div(2, 0)));
 
             //check div(double a, int b)
             Assert.AreEqual(5.25, OwnMath.div(10.5, 2));
             Assert.AreEqual(-5.25, OwnMath.div(-10.5, 2));
             Assert.AreEqual(0, OwnMath.div(0.0, 2));
-            Assert.AreEqual(double.PositiveInfinity, OwnMath.div(10.5, 0));
+            Assert.ThrowsException<Exception>(() => (OwnMath.div(2.5, 0)));
 
             //check div(int a, double b)
             Assert.AreEqual(4, OwnMath.div(10, 2.5));
             Assert.AreEqual(-4, OwnMath.div(-10, 2.5));
             Assert.AreEqual(0, OwnMath.div(0, 2.5));
-            Assert.AreEqual(double.PositiveInfinity, OwnMath.div(10, 0));
 
             //check mul(double a, double b)
             Assert.AreEqual(4.2, OwnMath.div(10.5, 2.5));
@@ -96,9 +104,12 @@ namespace P_Math_Tests
             Assert.AreEqual(5, OwnMath.divInt(10, 2));
             Assert.AreEqual(-5, OwnMath.divInt(-10, 2));
             Assert.AreEqual(0, OwnMath.divInt(0, 2));
-            Assert.ThrowsException<DivideByZeroException>(() => (OwnMath.divInt(2, 0)));
+            Assert.ThrowsException<Exception>(() => (OwnMath.divInt(2, 0)));
         }
 
+        /**
+        * @brief Tests Abs function
+        */
         [TestMethod]
         public void AbsTest()
         {
@@ -112,15 +123,21 @@ namespace P_Math_Tests
             Assert.AreEqual(10.5, OwnMath.Abs(-10.5));
         }
 
+        /**
+        * @brief Tests Factorial function
+        */
         [TestMethod]
         public void FactorialTest()
         {
             //check Factorial(int a)
-            Assert.AreEqual(6, OwnMath.Factorial(3));
-            Assert.AreEqual(1, OwnMath.Factorial(0));
-            Assert.ThrowsException<InvalidOperationException>(() => OwnMath.Factorial(-2));
+            Assert.AreEqual(Convert.ToUInt32(6), OwnMath.Factorial(3));
+            Assert.AreEqual(Convert.ToUInt32(1), OwnMath.Factorial(0));
+            Assert.ThrowsException<Exception>(() => OwnMath.Factorial(-2));
         }
 
+        /**
+        * @brief Tests memAdd function
+        */
         [TestMethod]
         public void MemAddTest()
         {
@@ -141,6 +158,9 @@ namespace P_Math_Tests
             OwnMath.memDel();
         }
 
+        /**
+        * @brief Tests memSub function
+        */
         [TestMethod]
         public void MemSubTest()
         {
@@ -162,6 +182,9 @@ namespace P_Math_Tests
             OwnMath.memDel();
         }
 
+        /**
+        * @brief Tests memDel function
+        */
         [TestMethod]
         public void MemDelTest()
         {
@@ -179,6 +202,9 @@ namespace P_Math_Tests
             OwnMath.memDel();
         }
 
+        /**
+        * @brief Tests memLoad function
+        */
         [TestMethod]
         public void MemLoadTest()
         {
@@ -197,6 +223,9 @@ namespace P_Math_Tests
             OwnMath.memDel();
         }
 
+        /**
+        * @brief Tests memLoadInt function
+        */
         [TestMethod]
         public void MemLoadIntTest()
         {
@@ -212,6 +241,9 @@ namespace P_Math_Tests
             OwnMath.memDel();
         }
 
+        /**
+        * @brief Tests Floor function
+        */
         [TestMethod]
         public void FloorTest()
         {
@@ -228,6 +260,9 @@ namespace P_Math_Tests
             Assert.IsInstanceOfType(OwnMath.floorInt(0.25), typeof(int));
         }
 
+        /**
+        * @brief Tests ceil function
+        */
         [TestMethod]
         public void CeilTest()
         {
@@ -242,6 +277,9 @@ namespace P_Math_Tests
             Assert.AreEqual(1, OwnMath.ceilInt(0.25));
         }
 
+        /**
+        * @brief Tests Round function
+        */
         [TestMethod]
         public void RoundTest()
         {
@@ -250,12 +288,16 @@ namespace P_Math_Tests
             Assert.AreEqual(6.5, OwnMath.round(6.46, 1));
             Assert.AreEqual(-1.5, OwnMath.round(-1.53, 1));
             Assert.AreEqual(-1.6, OwnMath.round(-1.58, 1));
+            Assert.AreEqual(6, OwnMath.round(6.2, 0));
 
             //check Round(double a)
             Assert.AreEqual(6, OwnMath.round(6.4));
             Assert.AreEqual(7, OwnMath.round(6.6));
         }
 
+        /**
+        * @brief Tests Pow function
+        */
         [TestMethod]
         public void PowTest()
         {
@@ -271,20 +313,54 @@ namespace P_Math_Tests
             Assert.AreEqual(0.0, OwnMath.pow(0.0, 2));
         }
 
+        /**
+        * @brief Tests Sqrt function
+        */
         [TestMethod]
         public void SqrtTest()
         {
             //check Sqrt(int a)
             Assert.AreEqual(3, Math.Sqrt(9));
             Assert.AreEqual(0, Math.Sqrt(0));
-            Assert.ThrowsException<InvalidOperationException>(() => Math.Sqrt(-9));
+            Assert.ThrowsException<Exception>(() => OwnMath.sqrt(-9));
         }
 
+        /**
+        * @brief Tests Root function
+        */
         [TestMethod]
         public void RootTest()
         {
             //check Root()
-            //Assert.AreEqual(0, OwnMath.root());
+            Assert.AreEqual(2, OwnMath.root(8, 3));
+            Assert.AreEqual(0.5, OwnMath.root(8, -3));
+            Assert.AreEqual(0, OwnMath.root(0, 3));
+            Assert.ThrowsException<Exception>(() => (OwnMath.root(-8, 3)));
+            Assert.ThrowsException<Exception>(() => (OwnMath.root(8, 0)));
+        }
+
+        /**
+        * @brief Tests Square function
+        */
+        [TestMethod]
+        public void SquareTest()
+        {
+            //check Square()
+            Assert.AreEqual(0, OwnMath.square(0));
+            Assert.AreEqual(16, OwnMath.square(4));
+            Assert.AreEqual(16, OwnMath.square(-4));
+        }
+
+        /**
+        * @brief Tests Reverse function
+        */
+        [TestMethod]
+        public void ReverseTest()
+        {
+            //check Reverse()
+            Assert.ThrowsException<Exception>(() => (OwnMath.reverse(0)));
+            Assert.AreEqual(0.5, OwnMath.reverse(2));
+            Assert.AreEqual(-0.5, OwnMath.reverse(-2));
         }
     }
 }
