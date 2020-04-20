@@ -65,7 +65,8 @@ namespace IVS_Calculator
         List<double> numbers = new List<double>();
         List<Operators> operations = new List<Operators>();
         bool calculated = false;
-        char carka = '.';
+        char carka = ',';
+        bool showErrorDialogs = false;
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         #region Constructor
@@ -413,8 +414,11 @@ namespace IVS_Calculator
 
         double ParseNumber(string number)
         {
-            if (number.Last<char>() == carka)number.Trim(carka);
-            return double.Parse(number);
+            if (number.Last<char>() == carka) number.Trim(carka);
+            double result;
+            if (!double.TryParse(number,out result))
+                return 0;
+            return result;
         }
         private void InsertOperator(Operators value)
         {
@@ -469,8 +473,26 @@ namespace IVS_Calculator
                 else
                     numbers.Add(0);
             }
-            while (operations.Count > 0)
-                Calculate();
+            try
+            {
+                while (operations.Count > 0)
+                    Calculate();
+            }
+            catch (Exception e)
+            {
+                DeleteText();
+                operations.Clear();
+                numbers.Clear();
+                Rewrite();
+                if (showErrorDialogs)
+                    MessageBox.Show(e.Message, "MathError", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    InsertText("MathError");
+                calculated = true;
+                return;
+            }
+
+            
             DeleteText();
             Rewrite();
             InsertText(numbers[0].ToString());
