@@ -53,9 +53,9 @@ namespace IVS_Calculator
 
         Operation[] definedOperations = new Operation[] {
         new Operation(Keys.Add,"+","+",OwnMath.add),
-        new Operation(Keys.Add,"—","-",OwnMath.sub),
-        new Operation(Keys.Add,"×","*",OwnMath.mul),
-        new Operation(Keys.Add,"÷","/",OwnMath.div),
+        new Operation(Keys.Subtract,"—","-",OwnMath.sub),
+        new Operation(Keys.Multiply,"×","*",OwnMath.mul),
+        new Operation(Keys.Divide,"÷","/",OwnMath.div),
         new Operation(Keys.None,"xⁿ","^",OwnMath.pow),
         new Operation(Keys.None,"ⁿ√x","√",OwnMath.root),
         };
@@ -65,6 +65,7 @@ namespace IVS_Calculator
         List<double> numbers = new List<double>();
         List<Operators> operations = new List<Operators>();
         bool calculated = false;
+        char carka = '.';
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         #region Constructor
@@ -196,9 +197,9 @@ namespace IVS_Calculator
 
         private void ButtonDot_Click(object sender, EventArgs e)
         {
-            if (!this.UserInput.Text.Contains("."))
+            if (!this.UserInput.Text.Contains(carka))
             {
-                this.UserInput.Text = this.UserInput.Text + ".";
+                this.UserInput.Text = this.UserInput.Text + carka;
             }
         }
 
@@ -410,10 +411,15 @@ namespace IVS_Calculator
             }
         }
 
+        double ParseNumber(string number)
+        {
+            if (number.Last<char>() == carka)number.Trim(carka);
+            return double.Parse(number);
+        }
         private void InsertOperator(Operators value)
         {
             if (UserInput.Text != string.Empty)
-                numbers.Add(Double.Parse(UserInput.Text));
+                numbers.Add(ParseNumber(UserInput.Text));
             else
             {
                 if (operations.Count > 0)
@@ -455,7 +461,7 @@ namespace IVS_Calculator
         private void CalculateEqutation()
         {
             if (UserInput.Text != string.Empty)
-                numbers.Add(Double.Parse(UserInput.Text));
+                numbers.Add(ParseNumber(UserInput.Text));
             else
             {
                 if (operations.Count > 0)
@@ -473,28 +479,8 @@ namespace IVS_Calculator
             numbers.Clear();
         }
 
-        private void UserInput_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void Calculator_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Calculator_KeyDown(object sender, KeyEventArgs e)
         {
-            configfile.Replace(',', '.');
             switch (e.KeyCode)
             {
                 case Keys.Back:
@@ -576,9 +562,9 @@ namespace IVS_Calculator
                     InsertOperator(Operators.add);
                     break;
                 case Keys.Decimal:
-                    if (!this.UserInput.Text.Contains("."))
+                    if (!this.UserInput.Text.Contains(carka))
                     {
-                        this.UserInput.Text = this.UserInput.Text + ".";
+                        this.UserInput.Text = this.UserInput.Text + carka;
                     }
                     break;
                 default:
@@ -609,7 +595,5 @@ namespace IVS_Calculator
             var help = new Help();
             help.Show();
         }
-
-
     }
 }

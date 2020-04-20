@@ -96,7 +96,7 @@
             this.UserInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.UserInput.WordWrap = false;
             this.UserInput.TextChanged += new System.EventHandler(this.UserInput_TextChanged);
-            this.UserInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UserInput_KeyPress);
+            this.UserInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             // 
             // ButtonPanel
             // 
@@ -942,7 +942,6 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kalkulačka v1.0";
-            this.Load += new System.EventHandler(this.Calculator_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             this.ButtonPanel.ResumeLayout(false);
             this.MemoryTable.ResumeLayout(false);
