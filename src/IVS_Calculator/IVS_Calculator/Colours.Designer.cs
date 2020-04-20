@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.saveButt = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.background = new System.Windows.Forms.Button();
             this.ButtonPanel = new System.Windows.Forms.TableLayoutPanel();
             this.button_oper_root2 = new System.Windows.Forms.Button();
             this.button_oper_power2 = new System.Windows.Forms.Button();
@@ -100,10 +99,10 @@
             this.saveButt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButt.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.saveButt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(143)))), ((int)(((byte)(88)))));
-            this.saveButt.Location = new System.Drawing.Point(231, 343);
+            this.saveButt.Location = new System.Drawing.Point(232, 333);
             this.saveButt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.saveButt.Name = "saveButt";
-            this.saveButt.Size = new System.Drawing.Size(200, 39);
+            this.saveButt.Size = new System.Drawing.Size(200, 50);
             this.saveButt.TabIndex = 12;
             this.saveButt.Text = "Save settings";
             this.saveButt.UseVisualStyleBackColor = false;
@@ -121,24 +120,6 @@
             this.label8.Size = new System.Drawing.Size(292, 21);
             this.label8.TabIndex = 14;
             this.label8.Text = "Change button colour by clicking on it.";
-            // 
-            // background
-            // 
-            this.background.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.background.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.background.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.background.FlatAppearance.BorderSize = 0;
-            this.background.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.background.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.background.ForeColor = System.Drawing.Color.White;
-            this.background.Location = new System.Drawing.Point(231, 162);
-            this.background.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.background.Name = "background";
-            this.background.Size = new System.Drawing.Size(200, 61);
-            this.background.TabIndex = 15;
-            this.background.Text = "Calculator background colour";
-            this.background.UseVisualStyleBackColor = false;
-            this.background.Click += new System.EventHandler(this.button1_Click);
             // 
             // ButtonPanel
             // 
@@ -866,7 +847,7 @@
             this.check_font.AutoSize = true;
             this.check_font.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.check_font.ForeColor = System.Drawing.Color.White;
-            this.check_font.Location = new System.Drawing.Point(232, 130);
+            this.check_font.Location = new System.Drawing.Point(232, 128);
             this.check_font.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.check_font.Name = "check_font";
             this.check_font.Size = new System.Drawing.Size(139, 21);
@@ -883,10 +864,10 @@
             this.all_operators.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.all_operators.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.all_operators.ForeColor = System.Drawing.Color.White;
-            this.all_operators.Location = new System.Drawing.Point(231, 229);
+            this.all_operators.Location = new System.Drawing.Point(232, 157);
             this.all_operators.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.all_operators.Name = "all_operators";
-            this.all_operators.Size = new System.Drawing.Size(200, 32);
+            this.all_operators.Size = new System.Drawing.Size(200, 50);
             this.all_operators.TabIndex = 20;
             this.all_operators.Text = "Operators";
             this.all_operators.UseVisualStyleBackColor = false;
@@ -901,10 +882,10 @@
             this.all_numbers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.all_numbers.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.all_numbers.ForeColor = System.Drawing.Color.White;
-            this.all_numbers.Location = new System.Drawing.Point(231, 267);
+            this.all_numbers.Location = new System.Drawing.Point(232, 216);
             this.all_numbers.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.all_numbers.Name = "all_numbers";
-            this.all_numbers.Size = new System.Drawing.Size(200, 32);
+            this.all_numbers.Size = new System.Drawing.Size(200, 50);
             this.all_numbers.TabIndex = 21;
             this.all_numbers.Text = "Numbers";
             this.all_numbers.UseVisualStyleBackColor = false;
@@ -919,10 +900,10 @@
             this.reset_default.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reset_default.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.reset_default.ForeColor = System.Drawing.Color.White;
-            this.reset_default.Location = new System.Drawing.Point(231, 304);
+            this.reset_default.Location = new System.Drawing.Point(232, 275);
             this.reset_default.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.reset_default.Name = "reset_default";
-            this.reset_default.Size = new System.Drawing.Size(200, 32);
+            this.reset_default.Size = new System.Drawing.Size(200, 50);
             this.reset_default.TabIndex = 22;
             this.reset_default.Text = "Reset to default";
             this.reset_default.UseVisualStyleBackColor = false;
@@ -941,7 +922,6 @@
             this.Controls.Add(this.check_background);
             this.Controls.Add(this.MemoryTable);
             this.Controls.Add(this.ButtonPanel);
-            this.Controls.Add(this.background);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.saveButt);
             this.Controls.Add(this.label1);
@@ -965,7 +945,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button saveButt;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button background;
         private System.Windows.Forms.TableLayoutPanel ButtonPanel;
         private System.Windows.Forms.Button button_oper_root2;
         private System.Windows.Forms.Button button_oper_power2;

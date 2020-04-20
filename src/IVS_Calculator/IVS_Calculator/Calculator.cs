@@ -102,13 +102,6 @@ namespace IVS_Calculator
                 if (!config[1].Contains("=")) continue;
                 config.AddRange(config[1].Split('='));
                 config.RemoveAt(1);
-                if (config[0] == "Calculator")
-                {
-                    if (config[1].Trim(' ', '"') == "backColor")
-                        this.BackColor = Color.FromArgb(int.Parse(config[2].Trim(' ', '"')));
-                    if (config[1].Trim(' ', '"') == "fontColor")
-                        this.ForeColor = Color.FromArgb(int.Parse(config[2].Trim(' ', '"')));
-                }
                 // Control[] found = FindControls(Controls.Cast<Control>(),config[0].Trim(' ', '"'));
                 IEnumerable<Control> found = GetAll(this, config[0].Trim(' ', '"'));
                 //InsertText(found.Count().ToString()); 
@@ -181,7 +174,7 @@ namespace IVS_Calculator
 
         private void ButtonPercent_Click(object sender, EventArgs e)
         {
-
+            ///TODO
         }
 
         private void ButtonChange_Click(object sender, EventArgs e)
@@ -198,9 +191,9 @@ namespace IVS_Calculator
 
         private void ButtonDot_Click(object sender, EventArgs e)
         {
-            if (!this.UserInput.Text.Contains(carka))
+            if (!this.UserInput.Text.Contains(carka)||calculated)
             {
-                this.UserInput.Text = this.UserInput.Text + carka;
+                InsertText(carka.ToString());
             }
         }
 
@@ -280,13 +273,16 @@ namespace IVS_Calculator
         /// </summary>
         private void ButtonCE_Click(object sender, EventArgs e)
         {
-            //Clears the input box
+            numbers.Clear();
+            operations.Clear();
+            Rewrite();
             DeleteText();
         }
 
         private void ButtonC_Click(object sender, EventArgs e)
         {
-
+            //Clears the input box
+            DeleteText();
         }
         #endregion
 
@@ -584,9 +580,9 @@ namespace IVS_Calculator
                     InsertOperator(Operators.add);
                     break;
                 case Keys.Decimal:
-                    if (!this.UserInput.Text.Contains(carka))
+                    if (!this.UserInput.Text.Contains(carka)||calculated)
                     {
-                        this.UserInput.Text = this.UserInput.Text + carka;
+                        InsertText(carka.ToString());
                     }
                     break;
                 default:

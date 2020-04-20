@@ -85,11 +85,10 @@
             this.UserInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UserInput.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.UserInput.ForeColor = System.Drawing.Color.White;
-            this.UserInput.Location = new System.Drawing.Point(10, 58);
-            this.UserInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.UserInput.Location = new System.Drawing.Point(7, 38);
             this.UserInput.Name = "UserInput";
             this.UserInput.ReadOnly = true;
-            this.UserInput.Size = new System.Drawing.Size(432, 64);
+            this.UserInput.Size = new System.Drawing.Size(288, 43);
             this.UserInput.TabIndex = 1;
             this.UserInput.TabStop = false;
             this.UserInput.Tag = "";
@@ -138,7 +137,7 @@
             this.ButtonPanel.Controls.Add(this.button_oper_minus, 3, 4);
             this.ButtonPanel.Controls.Add(this.button_oper_multiply, 3, 3);
             this.ButtonPanel.Controls.Add(this.button_oper_division, 3, 2);
-            this.ButtonPanel.Location = new System.Drawing.Point(2, 160);
+            this.ButtonPanel.Location = new System.Drawing.Point(1, 104);
             this.ButtonPanel.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonPanel.Name = "ButtonPanel";
             this.ButtonPanel.RowCount = 7;
@@ -149,8 +148,8 @@
             this.ButtonPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
             this.ButtonPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
             this.ButtonPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28816F));
-            this.ButtonPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.ButtonPanel.Size = new System.Drawing.Size(453, 486);
+            this.ButtonPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.ButtonPanel.Size = new System.Drawing.Size(302, 316);
             this.ButtonPanel.TabIndex = 2;
             // 
             // button_oper_root2
@@ -162,10 +161,10 @@
             this.button_oper_root2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_root2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_root2.ForeColor = System.Drawing.Color.White;
-            this.button_oper_root2.Location = new System.Drawing.Point(228, 140);
-            this.button_oper_root2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_root2.Location = new System.Drawing.Point(151, 91);
+            this.button_oper_root2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_root2.Name = "button_oper_root2";
-            this.button_oper_root2.Size = new System.Drawing.Size(109, 65);
+            this.button_oper_root2.Size = new System.Drawing.Size(73, 43);
             this.button_oper_root2.TabIndex = 28;
             this.button_oper_root2.Text = "²√x";
             this.button_oper_root2.UseCompatibleTextRendering = true;
@@ -182,10 +181,10 @@
             this.button_oper_power2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_power2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_power2.ForeColor = System.Drawing.Color.White;
-            this.button_oper_power2.Location = new System.Drawing.Point(115, 140);
-            this.button_oper_power2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_power2.Location = new System.Drawing.Point(76, 91);
+            this.button_oper_power2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_power2.Name = "button_oper_power2";
-            this.button_oper_power2.Size = new System.Drawing.Size(109, 65);
+            this.button_oper_power2.Size = new System.Drawing.Size(73, 43);
             this.button_oper_power2.TabIndex = 27;
             this.button_oper_power2.Text = "x²";
             this.button_oper_power2.UseCompatibleTextRendering = true;
@@ -202,10 +201,10 @@
             this.button_oper_fraction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_fraction.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_fraction.ForeColor = System.Drawing.Color.White;
-            this.button_oper_fraction.Location = new System.Drawing.Point(2, 140);
-            this.button_oper_fraction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_fraction.Location = new System.Drawing.Point(1, 91);
+            this.button_oper_fraction.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_fraction.Name = "button_oper_fraction";
-            this.button_oper_fraction.Size = new System.Drawing.Size(109, 65);
+            this.button_oper_fraction.Size = new System.Drawing.Size(73, 43);
             this.button_oper_fraction.TabIndex = 26;
             this.button_oper_fraction.Text = "1/x";
             this.button_oper_fraction.UseCompatibleTextRendering = true;
@@ -222,10 +221,10 @@
             this.button_oper_abs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_abs.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_abs.ForeColor = System.Drawing.Color.White;
-            this.button_oper_abs.Location = new System.Drawing.Point(341, 71);
-            this.button_oper_abs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_abs.Location = new System.Drawing.Point(226, 46);
+            this.button_oper_abs.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_abs.Name = "button_oper_abs";
-            this.button_oper_abs.Size = new System.Drawing.Size(110, 65);
+            this.button_oper_abs.Size = new System.Drawing.Size(75, 43);
             this.button_oper_abs.TabIndex = 25;
             this.button_oper_abs.Text = "|x|";
             this.button_oper_abs.UseCompatibleTextRendering = true;
@@ -241,10 +240,10 @@
             this.button_oper_root1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_root1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_root1.ForeColor = System.Drawing.Color.White;
-            this.button_oper_root1.Location = new System.Drawing.Point(228, 71);
-            this.button_oper_root1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_root1.Location = new System.Drawing.Point(151, 46);
+            this.button_oper_root1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_root1.Name = "button_oper_root1";
-            this.button_oper_root1.Size = new System.Drawing.Size(109, 65);
+            this.button_oper_root1.Size = new System.Drawing.Size(73, 43);
             this.button_oper_root1.TabIndex = 6;
             this.button_oper_root1.Text = "ⁿ√x";
             this.button_oper_root1.UseCompatibleTextRendering = true;
@@ -261,10 +260,10 @@
             this.button_oper_power1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_power1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_power1.ForeColor = System.Drawing.Color.White;
-            this.button_oper_power1.Location = new System.Drawing.Point(115, 71);
-            this.button_oper_power1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_power1.Location = new System.Drawing.Point(76, 46);
+            this.button_oper_power1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_power1.Name = "button_oper_power1";
-            this.button_oper_power1.Size = new System.Drawing.Size(109, 65);
+            this.button_oper_power1.Size = new System.Drawing.Size(73, 43);
             this.button_oper_power1.TabIndex = 5;
             this.button_oper_power1.Text = "xⁿ";
             this.button_oper_power1.UseCompatibleTextRendering = true;
@@ -281,10 +280,10 @@
             this.button_oper_factorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_factorial.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_factorial.ForeColor = System.Drawing.Color.White;
-            this.button_oper_factorial.Location = new System.Drawing.Point(2, 71);
-            this.button_oper_factorial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_factorial.Location = new System.Drawing.Point(1, 46);
+            this.button_oper_factorial.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_factorial.Name = "button_oper_factorial";
-            this.button_oper_factorial.Size = new System.Drawing.Size(109, 65);
+            this.button_oper_factorial.Size = new System.Drawing.Size(73, 43);
             this.button_oper_factorial.TabIndex = 4;
             this.button_oper_factorial.Text = "x!";
             this.button_oper_factorial.UseCompatibleTextRendering = true;
@@ -301,10 +300,10 @@
             this.button_oper_del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_del.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_del.ForeColor = System.Drawing.Color.White;
-            this.button_oper_del.Location = new System.Drawing.Point(341, 2);
-            this.button_oper_del.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_del.Location = new System.Drawing.Point(226, 1);
+            this.button_oper_del.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_del.Name = "button_oper_del";
-            this.button_oper_del.Size = new System.Drawing.Size(110, 65);
+            this.button_oper_del.Size = new System.Drawing.Size(75, 43);
             this.button_oper_del.TabIndex = 3;
             this.button_oper_del.Text = "DEL";
             this.button_oper_del.UseCompatibleTextRendering = true;
@@ -321,10 +320,10 @@
             this.button_oper_c.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_c.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_c.ForeColor = System.Drawing.Color.White;
-            this.button_oper_c.Location = new System.Drawing.Point(228, 2);
-            this.button_oper_c.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_c.Location = new System.Drawing.Point(151, 1);
+            this.button_oper_c.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_c.Name = "button_oper_c";
-            this.button_oper_c.Size = new System.Drawing.Size(109, 65);
+            this.button_oper_c.Size = new System.Drawing.Size(73, 43);
             this.button_oper_c.TabIndex = 2;
             this.button_oper_c.Text = "C";
             this.button_oper_c.UseCompatibleTextRendering = true;
@@ -342,10 +341,10 @@
             this.button_oper_ce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_ce.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_ce.ForeColor = System.Drawing.Color.White;
-            this.button_oper_ce.Location = new System.Drawing.Point(115, 2);
-            this.button_oper_ce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_ce.Location = new System.Drawing.Point(76, 1);
+            this.button_oper_ce.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_ce.Name = "button_oper_ce";
-            this.button_oper_ce.Size = new System.Drawing.Size(109, 65);
+            this.button_oper_ce.Size = new System.Drawing.Size(73, 43);
             this.button_oper_ce.TabIndex = 1;
             this.button_oper_ce.Text = "CE";
             this.button_oper_ce.UseCompatibleTextRendering = true;
@@ -362,10 +361,10 @@
             this.button_oper_percent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_percent.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_percent.ForeColor = System.Drawing.Color.White;
-            this.button_oper_percent.Location = new System.Drawing.Point(2, 2);
-            this.button_oper_percent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_percent.Location = new System.Drawing.Point(1, 1);
+            this.button_oper_percent.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_percent.Name = "button_oper_percent";
-            this.button_oper_percent.Size = new System.Drawing.Size(109, 65);
+            this.button_oper_percent.Size = new System.Drawing.Size(73, 43);
             this.button_oper_percent.TabIndex = 0;
             this.button_oper_percent.Text = "%";
             this.button_oper_percent.UseVisualStyleBackColor = false;
@@ -381,10 +380,10 @@
             this.button_oper_equal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_equal.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_equal.ForeColor = System.Drawing.Color.White;
-            this.button_oper_equal.Location = new System.Drawing.Point(341, 416);
-            this.button_oper_equal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_equal.Location = new System.Drawing.Point(226, 271);
+            this.button_oper_equal.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_equal.Name = "button_oper_equal";
-            this.button_oper_equal.Size = new System.Drawing.Size(110, 68);
+            this.button_oper_equal.Size = new System.Drawing.Size(75, 44);
             this.button_oper_equal.TabIndex = 23;
             this.button_oper_equal.Text = "=";
             this.button_oper_equal.UseCompatibleTextRendering = true;
@@ -401,10 +400,10 @@
             this.button_oper_dot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_dot.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_dot.ForeColor = System.Drawing.Color.White;
-            this.button_oper_dot.Location = new System.Drawing.Point(228, 416);
-            this.button_oper_dot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_dot.Location = new System.Drawing.Point(151, 271);
+            this.button_oper_dot.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_dot.Name = "button_oper_dot";
-            this.button_oper_dot.Size = new System.Drawing.Size(109, 68);
+            this.button_oper_dot.Size = new System.Drawing.Size(73, 44);
             this.button_oper_dot.TabIndex = 22;
             this.button_oper_dot.Text = ".";
             this.button_oper_dot.UseCompatibleTextRendering = true;
@@ -422,10 +421,10 @@
             this.button_num_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_num_0.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_num_0.ForeColor = System.Drawing.Color.White;
-            this.button_num_0.Location = new System.Drawing.Point(115, 416);
-            this.button_num_0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_num_0.Location = new System.Drawing.Point(76, 271);
+            this.button_num_0.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_num_0.Name = "button_num_0";
-            this.button_num_0.Size = new System.Drawing.Size(109, 68);
+            this.button_num_0.Size = new System.Drawing.Size(73, 44);
             this.button_num_0.TabIndex = 21;
             this.button_num_0.Text = "0";
             this.button_num_0.UseCompatibleTextRendering = true;
@@ -442,10 +441,10 @@
             this.button_oper_change.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_change.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_change.ForeColor = System.Drawing.Color.White;
-            this.button_oper_change.Location = new System.Drawing.Point(2, 416);
-            this.button_oper_change.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_change.Location = new System.Drawing.Point(1, 271);
+            this.button_oper_change.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_change.Name = "button_oper_change";
-            this.button_oper_change.Size = new System.Drawing.Size(109, 68);
+            this.button_oper_change.Size = new System.Drawing.Size(73, 44);
             this.button_oper_change.TabIndex = 20;
             this.button_oper_change.Text = "ᐩ/₋";
             this.button_oper_change.UseCompatibleTextRendering = true;
@@ -463,10 +462,10 @@
             this.button_num_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_num_1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_num_1.ForeColor = System.Drawing.Color.White;
-            this.button_num_1.Location = new System.Drawing.Point(2, 347);
-            this.button_num_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_num_1.Location = new System.Drawing.Point(1, 226);
+            this.button_num_1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_num_1.Name = "button_num_1";
-            this.button_num_1.Size = new System.Drawing.Size(109, 65);
+            this.button_num_1.Size = new System.Drawing.Size(73, 43);
             this.button_num_1.TabIndex = 16;
             this.button_num_1.Text = "1";
             this.button_num_1.UseCompatibleTextRendering = true;
@@ -484,10 +483,10 @@
             this.button_num_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_num_4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_num_4.ForeColor = System.Drawing.Color.White;
-            this.button_num_4.Location = new System.Drawing.Point(2, 278);
-            this.button_num_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_num_4.Location = new System.Drawing.Point(1, 181);
+            this.button_num_4.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_num_4.Name = "button_num_4";
-            this.button_num_4.Size = new System.Drawing.Size(109, 65);
+            this.button_num_4.Size = new System.Drawing.Size(73, 43);
             this.button_num_4.TabIndex = 12;
             this.button_num_4.Text = "4";
             this.button_num_4.UseCompatibleTextRendering = true;
@@ -505,10 +504,10 @@
             this.button_num_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_num_7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_num_7.ForeColor = System.Drawing.Color.White;
-            this.button_num_7.Location = new System.Drawing.Point(2, 209);
-            this.button_num_7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_num_7.Location = new System.Drawing.Point(1, 136);
+            this.button_num_7.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_num_7.Name = "button_num_7";
-            this.button_num_7.Size = new System.Drawing.Size(109, 65);
+            this.button_num_7.Size = new System.Drawing.Size(73, 43);
             this.button_num_7.TabIndex = 8;
             this.button_num_7.Text = "7";
             this.button_num_7.UseCompatibleTextRendering = true;
@@ -526,10 +525,10 @@
             this.button_num_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_num_2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_num_2.ForeColor = System.Drawing.Color.White;
-            this.button_num_2.Location = new System.Drawing.Point(115, 347);
-            this.button_num_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_num_2.Location = new System.Drawing.Point(76, 226);
+            this.button_num_2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_num_2.Name = "button_num_2";
-            this.button_num_2.Size = new System.Drawing.Size(109, 65);
+            this.button_num_2.Size = new System.Drawing.Size(73, 43);
             this.button_num_2.TabIndex = 24;
             this.button_num_2.Text = "2";
             this.button_num_2.UseCompatibleTextRendering = true;
@@ -547,10 +546,10 @@
             this.button_num_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_num_5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_num_5.ForeColor = System.Drawing.Color.White;
-            this.button_num_5.Location = new System.Drawing.Point(115, 278);
-            this.button_num_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_num_5.Location = new System.Drawing.Point(76, 181);
+            this.button_num_5.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_num_5.Name = "button_num_5";
-            this.button_num_5.Size = new System.Drawing.Size(109, 65);
+            this.button_num_5.Size = new System.Drawing.Size(73, 43);
             this.button_num_5.TabIndex = 13;
             this.button_num_5.Text = "5";
             this.button_num_5.UseCompatibleTextRendering = true;
@@ -568,10 +567,10 @@
             this.button_num_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_num_8.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_num_8.ForeColor = System.Drawing.Color.White;
-            this.button_num_8.Location = new System.Drawing.Point(115, 209);
-            this.button_num_8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_num_8.Location = new System.Drawing.Point(76, 136);
+            this.button_num_8.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_num_8.Name = "button_num_8";
-            this.button_num_8.Size = new System.Drawing.Size(109, 65);
+            this.button_num_8.Size = new System.Drawing.Size(73, 43);
             this.button_num_8.TabIndex = 9;
             this.button_num_8.Text = "8";
             this.button_num_8.UseCompatibleTextRendering = true;
@@ -589,10 +588,10 @@
             this.button_num_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_num_3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_num_3.ForeColor = System.Drawing.Color.White;
-            this.button_num_3.Location = new System.Drawing.Point(228, 347);
-            this.button_num_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_num_3.Location = new System.Drawing.Point(151, 226);
+            this.button_num_3.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_num_3.Name = "button_num_3";
-            this.button_num_3.Size = new System.Drawing.Size(109, 65);
+            this.button_num_3.Size = new System.Drawing.Size(73, 43);
             this.button_num_3.TabIndex = 18;
             this.button_num_3.Text = "3";
             this.button_num_3.UseCompatibleTextRendering = true;
@@ -610,10 +609,10 @@
             this.button_num_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_num_6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_num_6.ForeColor = System.Drawing.Color.White;
-            this.button_num_6.Location = new System.Drawing.Point(228, 278);
-            this.button_num_6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_num_6.Location = new System.Drawing.Point(151, 181);
+            this.button_num_6.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_num_6.Name = "button_num_6";
-            this.button_num_6.Size = new System.Drawing.Size(109, 65);
+            this.button_num_6.Size = new System.Drawing.Size(73, 43);
             this.button_num_6.TabIndex = 14;
             this.button_num_6.Text = "6";
             this.button_num_6.UseCompatibleTextRendering = true;
@@ -631,10 +630,10 @@
             this.button_num_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_num_9.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_num_9.ForeColor = System.Drawing.Color.White;
-            this.button_num_9.Location = new System.Drawing.Point(228, 209);
-            this.button_num_9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_num_9.Location = new System.Drawing.Point(151, 136);
+            this.button_num_9.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_num_9.Name = "button_num_9";
-            this.button_num_9.Size = new System.Drawing.Size(109, 65);
+            this.button_num_9.Size = new System.Drawing.Size(73, 43);
             this.button_num_9.TabIndex = 10;
             this.button_num_9.Text = "9";
             this.button_num_9.UseCompatibleTextRendering = true;
@@ -651,10 +650,10 @@
             this.button_oper_plus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_plus.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_plus.ForeColor = System.Drawing.Color.White;
-            this.button_oper_plus.Location = new System.Drawing.Point(341, 347);
-            this.button_oper_plus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_plus.Location = new System.Drawing.Point(226, 226);
+            this.button_oper_plus.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_plus.Name = "button_oper_plus";
-            this.button_oper_plus.Size = new System.Drawing.Size(110, 65);
+            this.button_oper_plus.Size = new System.Drawing.Size(75, 43);
             this.button_oper_plus.TabIndex = 19;
             this.button_oper_plus.Text = "+";
             this.button_oper_plus.UseCompatibleTextRendering = true;
@@ -671,10 +670,10 @@
             this.button_oper_minus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_minus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_minus.ForeColor = System.Drawing.Color.White;
-            this.button_oper_minus.Location = new System.Drawing.Point(341, 278);
-            this.button_oper_minus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_minus.Location = new System.Drawing.Point(226, 181);
+            this.button_oper_minus.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_minus.Name = "button_oper_minus";
-            this.button_oper_minus.Size = new System.Drawing.Size(110, 65);
+            this.button_oper_minus.Size = new System.Drawing.Size(75, 43);
             this.button_oper_minus.TabIndex = 15;
             this.button_oper_minus.Text = "—";
             this.button_oper_minus.UseCompatibleTextRendering = true;
@@ -691,10 +690,10 @@
             this.button_oper_multiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_multiply.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_multiply.ForeColor = System.Drawing.Color.White;
-            this.button_oper_multiply.Location = new System.Drawing.Point(341, 209);
-            this.button_oper_multiply.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_multiply.Location = new System.Drawing.Point(226, 136);
+            this.button_oper_multiply.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_multiply.Name = "button_oper_multiply";
-            this.button_oper_multiply.Size = new System.Drawing.Size(110, 65);
+            this.button_oper_multiply.Size = new System.Drawing.Size(75, 43);
             this.button_oper_multiply.TabIndex = 11;
             this.button_oper_multiply.Text = "×";
             this.button_oper_multiply.UseCompatibleTextRendering = true;
@@ -711,10 +710,10 @@
             this.button_oper_division.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_oper_division.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_oper_division.ForeColor = System.Drawing.Color.White;
-            this.button_oper_division.Location = new System.Drawing.Point(341, 140);
-            this.button_oper_division.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_oper_division.Location = new System.Drawing.Point(226, 91);
+            this.button_oper_division.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button_oper_division.Name = "button_oper_division";
-            this.button_oper_division.Size = new System.Drawing.Size(110, 65);
+            this.button_oper_division.Size = new System.Drawing.Size(75, 43);
             this.button_oper_division.TabIndex = 7;
             this.button_oper_division.Text = "÷";
             this.button_oper_division.UseCompatibleTextRendering = true;
@@ -739,13 +738,13 @@
             this.MemoryTable.Controls.Add(this.button_memory_mr, 1, 0);
             this.MemoryTable.Controls.Add(this.button_memory_mc, 0, 0);
             this.MemoryTable.Controls.Add(this.button_memory_ms, 4, 0);
-            this.MemoryTable.Location = new System.Drawing.Point(6, 120);
+            this.MemoryTable.Location = new System.Drawing.Point(4, 78);
             this.MemoryTable.Margin = new System.Windows.Forms.Padding(0);
             this.MemoryTable.Name = "MemoryTable";
             this.MemoryTable.RowCount = 1;
             this.MemoryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.MemoryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.MemoryTable.Size = new System.Drawing.Size(440, 40);
+            this.MemoryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.MemoryTable.Size = new System.Drawing.Size(293, 26);
             this.MemoryTable.TabIndex = 4;
             // 
             // button_memory_minus
@@ -755,10 +754,9 @@
             this.button_memory_minus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_memory_minus.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_memory_minus.ForeColor = System.Drawing.Color.White;
-            this.button_memory_minus.Location = new System.Drawing.Point(268, 5);
-            this.button_memory_minus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_memory_minus.Location = new System.Drawing.Point(177, 3);
             this.button_memory_minus.Name = "button_memory_minus";
-            this.button_memory_minus.Size = new System.Drawing.Size(80, 30);
+            this.button_memory_minus.Size = new System.Drawing.Size(52, 20);
             this.button_memory_minus.TabIndex = 3;
             this.button_memory_minus.Text = "M-";
             this.button_memory_minus.UseCompatibleTextRendering = true;
@@ -774,10 +772,9 @@
             this.button_memory_plus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_memory_plus.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_memory_plus.ForeColor = System.Drawing.Color.White;
-            this.button_memory_plus.Location = new System.Drawing.Point(180, 5);
-            this.button_memory_plus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_memory_plus.Location = new System.Drawing.Point(119, 3);
             this.button_memory_plus.Name = "button_memory_plus";
-            this.button_memory_plus.Size = new System.Drawing.Size(80, 30);
+            this.button_memory_plus.Size = new System.Drawing.Size(52, 20);
             this.button_memory_plus.TabIndex = 2;
             this.button_memory_plus.Text = "M+";
             this.button_memory_plus.UseCompatibleTextRendering = true;
@@ -792,10 +789,9 @@
             this.button_memory_mr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_memory_mr.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_memory_mr.ForeColor = System.Drawing.Color.White;
-            this.button_memory_mr.Location = new System.Drawing.Point(92, 5);
-            this.button_memory_mr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_memory_mr.Location = new System.Drawing.Point(61, 3);
             this.button_memory_mr.Name = "button_memory_mr";
-            this.button_memory_mr.Size = new System.Drawing.Size(80, 30);
+            this.button_memory_mr.Size = new System.Drawing.Size(52, 20);
             this.button_memory_mr.TabIndex = 1;
             this.button_memory_mr.Text = "MR";
             this.button_memory_mr.UseCompatibleTextRendering = true;
@@ -810,10 +806,9 @@
             this.button_memory_mc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_memory_mc.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_memory_mc.ForeColor = System.Drawing.SystemColors.Window;
-            this.button_memory_mc.Location = new System.Drawing.Point(4, 5);
-            this.button_memory_mc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_memory_mc.Location = new System.Drawing.Point(3, 3);
             this.button_memory_mc.Name = "button_memory_mc";
-            this.button_memory_mc.Size = new System.Drawing.Size(80, 30);
+            this.button_memory_mc.Size = new System.Drawing.Size(52, 20);
             this.button_memory_mc.TabIndex = 0;
             this.button_memory_mc.Text = "MC";
             this.button_memory_mc.UseCompatibleTextRendering = true;
@@ -827,10 +822,9 @@
             this.button_memory_ms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_memory_ms.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_memory_ms.ForeColor = System.Drawing.Color.White;
-            this.button_memory_ms.Location = new System.Drawing.Point(356, 5);
-            this.button_memory_ms.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_memory_ms.Location = new System.Drawing.Point(235, 3);
             this.button_memory_ms.Name = "button_memory_ms";
-            this.button_memory_ms.Size = new System.Drawing.Size(80, 30);
+            this.button_memory_ms.Size = new System.Drawing.Size(55, 20);
             this.button_memory_ms.TabIndex = 4;
             this.button_memory_ms.Text = "MS";
             this.button_memory_ms.UseCompatibleTextRendering = true;
@@ -843,10 +837,9 @@
             this.CalculationBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CalculationBox.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.CalculationBox.ForeColor = System.Drawing.Color.Coral;
-            this.CalculationBox.Location = new System.Drawing.Point(120, 25);
-            this.CalculationBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CalculationBox.Location = new System.Drawing.Point(80, 16);
             this.CalculationBox.Name = "CalculationBox";
-            this.CalculationBox.Size = new System.Drawing.Size(332, 25);
+            this.CalculationBox.Size = new System.Drawing.Size(221, 16);
             this.CalculationBox.TabIndex = 6;
             this.CalculationBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -855,14 +848,13 @@
             this.TopMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.TopMenu.Dock = System.Windows.Forms.DockStyle.None;
             this.TopMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.TopMenu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.TopMenu.ImageScalingSize = new System.Drawing.Size(22, 22);
             this.TopMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.button_pivo});
-            this.TopMenu.Location = new System.Drawing.Point(3, 5);
+            this.TopMenu.Location = new System.Drawing.Point(2, 3);
             this.TopMenu.Name = "TopMenu";
-            this.TopMenu.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            this.TopMenu.Size = new System.Drawing.Size(46, 36);
+            this.TopMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.TopMenu.Size = new System.Drawing.Size(160, 34);
             this.TopMenu.TabIndex = 12;
             // 
             // button_pivo
@@ -879,7 +871,7 @@
             this.button_pivo.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.button_pivo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.button_pivo.Name = "button_pivo";
-            this.button_pivo.Size = new System.Drawing.Size(38, 26);
+            this.button_pivo.Size = new System.Drawing.Size(34, 26);
             // 
             // aboutToolStripMenuItem
             // 
@@ -887,7 +879,7 @@
             this.aboutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(196, 40);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -898,7 +890,7 @@
             this.coloursToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.coloursToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.coloursToolStripMenuItem.Name = "coloursToolStripMenuItem";
-            this.coloursToolStripMenuItem.Size = new System.Drawing.Size(196, 40);
+            this.coloursToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.coloursToolStripMenuItem.Text = "Colours";
             this.coloursToolStripMenuItem.Click += new System.EventHandler(this.coloursToolStripMenuItem_Click);
             // 
@@ -908,7 +900,7 @@
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(196, 40);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.toolStripMenuItem1.Text = "Manual";
             // 
             // HelpToolStripMenuItem
@@ -918,26 +910,25 @@
             this.HelpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.HelpToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
-            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(196, 40);
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.HelpToolStripMenuItem.Text = "Help";
             this.HelpToolStripMenuItem.Click += new System.EventHandler(this.HelpToolStripMenuItem_Click);
             // 
             // Calculator
             // 
             this.AcceptButton = this.button_oper_plus;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.CancelButton = this.button_oper_ce;
-            this.ClientSize = new System.Drawing.Size(456, 648);
+            this.ClientSize = new System.Drawing.Size(304, 421);
             this.Controls.Add(this.TopMenu);
             this.Controls.Add(this.CalculationBox);
             this.Controls.Add(this.MemoryTable);
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.UserInput);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MinimumSize = new System.Drawing.Size(469, 678);
+            this.MinimumSize = new System.Drawing.Size(318, 454);
             this.Name = "Calculator";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

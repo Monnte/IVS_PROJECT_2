@@ -67,13 +67,6 @@ namespace IVS_Calculator
                 if (!config[1].Contains("=")) continue;
                 config.AddRange(config[1].Split('='));
                 config.RemoveAt(1);
-                if (config[0] == "Calculator")
-                {
-                    if (config[1].Trim(' ', '"') == "backColor")
-                        this.BackColor = Color.FromArgb(int.Parse(config[2].Trim(' ', '"')));
-                    if (config[1].Trim(' ', '"') == "fontColor")
-                        this.ForeColor = Color.FromArgb(int.Parse(config[2].Trim(' ', '"')));
-                }
                 IEnumerable<Control> found = GetAll(this, config[0].Trim(' ', '"'));
                 if (found.Count() == 0) continue;
                 foreach (Control con in found)
