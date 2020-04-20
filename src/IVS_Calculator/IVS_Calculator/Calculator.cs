@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using P_Math;
 using System.IO;
+using System.Globalization;
 
 namespace IVS_Calculator
 {
@@ -65,7 +66,7 @@ namespace IVS_Calculator
         List<double> numbers = new List<double>();
         List<Operators> operations = new List<Operators>();
         bool calculated = false;
-        char carka = ',';
+        char carka = '.';
         bool showErrorDialogs = false;
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -412,7 +413,7 @@ namespace IVS_Calculator
         {
             if (number.Last<char>() == carka) number.Trim(carka);
             double result;
-            if (!double.TryParse(number,out result))
+            if (!double.TryParse(number, NumberStyles.Any, new CultureInfo("en-US"), out result))
                 return 0;
             return result;
         }
