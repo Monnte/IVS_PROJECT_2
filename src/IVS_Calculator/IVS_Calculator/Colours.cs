@@ -285,6 +285,10 @@ namespace IVS_Calculator
         private void reset_default_Click(object sender, EventArgs e)
         {
             settings.Clear();
+            settings.Add("button_oper:backColor=" + Color.FromArgb(64, 64, 64).ToArgb().ToString());
+            settings.Add("button_num:backColor=" + Color.FromArgb(235, 143, 88).ToArgb().ToString());
+            settings.Add("button_oper:fontColor=" + Color.White.ToArgb().ToString());
+            settings.Add("button_num:fontColor=" + Color.White.ToArgb().ToString());
             loadSettings(settings);
         }
     }
