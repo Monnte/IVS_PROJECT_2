@@ -491,7 +491,7 @@ namespace IVS_Calculator
             
             DeleteText();
             Rewrite();
-            InsertText(numbers[0].ToString());
+            InsertText(numbers[0].ToString(new CultureInfo("en-US")));
             calculated = true;
             operations.Clear();
             numbers.Clear();
