@@ -175,6 +175,7 @@ namespace IVS_Calculator
         private void ButtonPercent_Click(object sender, EventArgs e)
         {
             ///TODO
+            percent();
         }
 
         private void ButtonChange_Click(object sender, EventArgs e)
@@ -191,7 +192,7 @@ namespace IVS_Calculator
 
         private void ButtonDot_Click(object sender, EventArgs e)
         {
-            if (!this.UserInput.Text.Contains(carka)||calculated)
+            if (!this.UserInput.Text.Contains(carka) || calculated)
             {
                 InsertText(carka.ToString());
             }
@@ -273,10 +274,7 @@ namespace IVS_Calculator
         /// </summary>
         private void ButtonCE_Click(object sender, EventArgs e)
         {
-            numbers.Clear();
-            operations.Clear();
-            Rewrite();
-            DeleteText();
+            clear();
         }
 
         private void ButtonC_Click(object sender, EventArgs e)
@@ -416,6 +414,14 @@ namespace IVS_Calculator
                 return 0;
             return result;
         }
+
+        void clear()
+        {
+            numbers.Clear();
+            operations.Clear();
+            Rewrite();
+            DeleteText();
+        }
         private void InsertOperator(Operators value)
         {
             if (UserInput.Text != string.Empty)
@@ -458,6 +464,20 @@ namespace IVS_Calculator
 
         #endregion
 
+        private void percent()
+        {
+            Operators last = operations.Last<Operators>();
+            if (last == Operators.add || Operators.sub == last)
+            {
+                UserInput.Text = (ParseNumber(UserInput.Text) / 100 * numbers.Last<double>()).ToString(new CultureInfo("en-US"));
+            }
+
+            if (last == Operators.mul)
+            {
+                UserInput.Text = (ParseNumber(UserInput.Text) / 100).ToString(new CultureInfo("en-US"));
+            }
+        }
+
         private void CalculateEqutation()
         {
             if (UserInput.Text != string.Empty)
@@ -488,7 +508,7 @@ namespace IVS_Calculator
                 return;
             }
 
-            
+
             DeleteText();
             Rewrite();
             InsertText(numbers[0].ToString(new CultureInfo("en-US")));
@@ -505,7 +525,10 @@ namespace IVS_Calculator
                     DeleteLast();
                     break;
                 case Keys.Delete:
-                    DeleteText();
+                    if (UserInput.Text == string.Empty)
+                        clear();
+                    else
+                        DeleteText();
                     break;
                 case Keys.D0:
                     InsertText("0");
@@ -580,7 +603,7 @@ namespace IVS_Calculator
                     InsertOperator(Operators.add);
                     break;
                 case Keys.Decimal:
-                    if (!this.UserInput.Text.Contains(carka)||calculated)
+                    if (!this.UserInput.Text.Contains(carka) || calculated)
                     {
                         InsertText(carka.ToString());
                     }
