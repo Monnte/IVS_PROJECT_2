@@ -1,4 +1,14 @@
-﻿using System;
+﻿/**
+ * @file Colours.cs
+ * @author Peter Zdravecký
+ * @brief About window
+ * @version 0.1
+ * @date 2020-04-29
+ * 
+ * @copyright Copyright (c) 2020
+ * 
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

@@ -1,4 +1,17 @@
-﻿using System;
+﻿/**
+ * @file Calculator.cs
+ * @author Peter Zdravecký
+ * @author Eduard Frlička
+ * @author Daniel Fajmon
+ * @brief The main code of calculator , handling input , output and operations
+ * @version 0.1
+ * @date 2020-04-29
+ * 
+ * @copyright Copyright (c) 2020
+ * 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -607,7 +620,7 @@ namespace IVS_Calculator
             loadConfig();
 
         }
-
+    
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var help = new Help();
