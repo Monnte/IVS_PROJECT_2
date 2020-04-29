@@ -312,18 +312,33 @@ namespace IVS_Calculator
                 if (definedOperations[i].buttonChar == operationClicked)
                     InsertOperator((Operators)i);
             }
-            for (int i = 0; i < definedInsantOperations.Length; i++)
-            {
-                if (definedInsantOperations[i].buttonChar == operationClicked)
-                {
-                    if (UserInput.Text != string.Empty)
-                        UserInput.Text = definedInsantOperations[i].function(Double.Parse(UserInput.Text)).ToString();
-                    else
-                        UserInput.Text = definedInsantOperations[i].function(0).ToString();
-                    calculated = true;
-                }
 
+            try
+            {
+                for (int i = 0; i < definedInsantOperations.Length; i++)
+                {
+                    if (definedInsantOperations[i].buttonChar == operationClicked)
+                    {
+                        if (UserInput.Text != string.Empty)
+                            UserInput.Text = definedInsantOperations[i].function(Double.Parse(UserInput.Text)).ToString();
+                        else
+                            UserInput.Text = definedInsantOperations[i].function(0).ToString();
+                        calculated = true;
+                    }
+
+                }
             }
+            catch (Exception error)
+            {
+                clear();
+                if (showErrorDialogs)
+                    MessageBox.Show(error.Message, "MathError", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    InsertText("MathError");
+                calculated = true;
+                return;
+            }
+            
 
             //Button b = (Button)sender;
 
@@ -429,10 +444,20 @@ namespace IVS_Calculator
         }
         private void InsertOperator(Operators value)
         {
+            if (value == Operators.sub&&(UserInput.Text==string.Empty||UserInput.Text=="-"))
+            {
+                if (UserInput.Text.Contains("-"))
+                    UserInput.Text = UserInput.Text.Trim('-');
+                else
+                    UserInput.Text = "-" + UserInput.Text;
+                return;
+            }
+
             if (UserInput.Text != string.Empty)
                 numbers.Add(ParseNumber(UserInput.Text));
             else
             {
+                
                 if (operations.Count > 0)
                     operations.RemoveAt(operations.Count - 1);
                 else
@@ -521,10 +546,7 @@ namespace IVS_Calculator
             }
             catch (Exception e)
             {
-                DeleteText();
-                operations.Clear();
-                numbers.Clear();
-                Rewrite();
+                clear();
                 if (showErrorDialogs)
                     MessageBox.Show(e.Message, "MathError", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
