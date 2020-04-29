@@ -479,6 +479,18 @@ namespace IVS_Calculator
 
         private void percent()
         {
+            if(operations.Count == 0) 
+            {
+                DeleteText();
+                if (showErrorDialogs)
+                    MessageBox.Show("No base for percentage", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    InsertText("No base for percentage");
+                    calculated = true;
+                }
+                return;
+            }
             Operators last = operations.Last<Operators>();
             if (last == Operators.add || Operators.sub == last)
             {
