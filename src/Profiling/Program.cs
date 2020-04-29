@@ -36,8 +36,7 @@ namespace Profiling
                 {
                     if (!double.TryParse(inputs[i], out tmp))
                     {
-                        Console.WriteLine("Wrong format of input.");
-                        return;
+                        continue;
                     }
                     numbers.Add(tmp);
                 }
@@ -63,7 +62,6 @@ namespace Profiling
             output = OwnMath.sqrt(OwnMath.mul(OwnMath.div(1, OwnMath.sub(N, 1)), OwnMath.sub(tmp, OwnMath.mul(N, OwnMath.pow(x_carka, 2)))));
 
             Console.WriteLine(output);
-
         }
     }
 }
