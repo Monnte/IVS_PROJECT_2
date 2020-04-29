@@ -187,7 +187,7 @@ namespace IVS_Calculator
 
         private void ButtonPercent_Click(object sender, EventArgs e)
         {
-            ///TODO
+            percent();
         }
 
         private void ButtonChange_Click(object sender, EventArgs e)
@@ -286,10 +286,7 @@ namespace IVS_Calculator
         /// </summary>
         private void ButtonCE_Click(object sender, EventArgs e)
         {
-            numbers.Clear();
-            operations.Clear();
-            Rewrite();
-            DeleteText();
+            clear();
         }
 
         private void ButtonC_Click(object sender, EventArgs e)
@@ -351,27 +348,28 @@ namespace IVS_Calculator
         #region Memory_Buttons
         private void ButtonMC_Click(object sender, EventArgs e)
         {
-
+            OwnMath.memDel();
         }
 
         private void ButtonMR_Click(object sender, EventArgs e)
         {
-
+            UserInput.Text = OwnMath.memLoad().ToString();
         }
 
         private void ButtonMemoryPlus_Click(object sender, EventArgs e)
         {
-
+            OwnMath.memAdd(ParseNumber(UserInput.Text));
         }
 
         private void ButtonMemoryminus_Click(object sender, EventArgs e)
         {
-
+            OwnMath.memSub(ParseNumber(UserInput.Text));
         }
 
         private void ButtonMS_Click(object sender, EventArgs e)
         {
-
+            OwnMath.memDel();
+            OwnMath.memAdd(ParseNumber(UserInput.Text));
         }
         #endregion
 
@@ -471,6 +469,28 @@ namespace IVS_Calculator
 
         #endregion
 
+        void clear()
+        {
+            numbers.Clear();
+            operations.Clear();
+            Rewrite();
+            DeleteText();
+        }
+
+        private void percent()
+        {
+            Operators last = operations.Last<Operators>();
+            if (last == Operators.add || Operators.sub == last)
+            {
+                UserInput.Text = (ParseNumber(UserInput.Text) / 100 * numbers.Last<double>()).ToString(new CultureInfo("en-US"));
+            }
+
+            if (last == Operators.mul)
+            {
+                UserInput.Text = (ParseNumber(UserInput.Text) / 100).ToString(new CultureInfo("en-US"));
+            }
+        }
+
         private void CalculateEqutation()
         {
             if (UserInput.Text != string.Empty)
@@ -518,7 +538,10 @@ namespace IVS_Calculator
                     DeleteLast();
                     break;
                 case Keys.Delete:
-                    DeleteText();
+                    if (UserInput.Text == string.Empty)
+                        clear();
+                    else
+                        DeleteText();
                     break;
                 case Keys.D0:
                     InsertText("0");
