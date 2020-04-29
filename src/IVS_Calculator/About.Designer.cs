@@ -127,9 +127,9 @@
             this.label7.Location = new System.Drawing.Point(9, 7);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(270, 31);
+            this.label7.Size = new System.Drawing.Size(265, 31);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Elon Musk Calculator";
+            this.label7.Text = "Elon Tusk Calculator";
             // 
             // label8
             // 
@@ -153,9 +153,9 @@
             this.label9.Location = new System.Drawing.Point(9, 274);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(410, 20);
+            this.label9.Size = new System.Drawing.Size(406, 20);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Contact : https://github.com/Zdravecky/IVS_PROJECT_2";
+            this.label9.Text = "Contact: https://github.com/Zdravecky/IVS_PROJECT_2";
             // 
             // About
             // 
@@ -173,9 +173,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(454, 339);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(454, 339);
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
