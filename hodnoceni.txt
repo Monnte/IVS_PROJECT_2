@@ -1,0 +1,4 @@
+xzdrav00 105 (základ GUI, profiling ,debugging ,doxygen, pomoc ostatným)
+xfrlic00 105 (matematicka knižica, funkcionalita kalkulačky, pomoc ostatným)
+xvano00 85 (uživatelska dokumentacia, testy pre matematicku knižnicu)
+xfajmo05 105 (mockup, GUI kalkulačky, pomoc pri tvorení funkcionalit kalkulačky, inštalator, najviac aktivný člen)
