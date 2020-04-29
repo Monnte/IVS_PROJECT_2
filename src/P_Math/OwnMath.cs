@@ -15,6 +15,18 @@ namespace P_Math
     {
         private static double mem = 0; /*!< Variable where answers are saved to memory*/
 
+
+        public static double reverse(double x)
+        {
+            if (x == 0) throw new Exception("nemozes delit nulou");
+            return 1 / x;
+        }
+
+        public static double square(double x)
+        {
+            return pow(x, 2);
+        }
+
         /**
         * @brief Add two numbers , double and double
         * 
@@ -243,12 +255,14 @@ namespace P_Math
         public static double Factorial(double n)
         {
             if (n >= 0)
-            return Factorial((uint)n);
-            return 0;
+                return Factorial((uint)n);
+            else
+                throw new Exception("Neexistuje zaporny faktorial");
         }
         public static uint Factorial(uint n)
         {
             if (n == 0) return 1;
+            if (n < 0) throw new Exception("Neexistuje zaporny faktorial");
             uint result = n;
             while (--n > 0)
             {
@@ -477,11 +491,15 @@ namespace P_Math
 
         public static double root(double x, int power)
         {
+            if (x < 0) throw new Exception("Ty pako, odmocnina zo zapornych cisel neje :D");
+            if (power == 0) throw new Exception("Neexistuje odmocnina na nultu");
             return pow(x, 1 / (double)power);
         }
 
         public static double root(double x, double power)
         {
+            if (x < 0) throw new Exception("Ty pako, odmocnina zo zapornych cisel neje :D");
+            if (power == 0) throw new Exception("Neexistuje odmocnina na nultu");
             return pow(x, 1 / power);
         }
     }
