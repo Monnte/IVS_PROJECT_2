@@ -3,6 +3,7 @@
 * @author Eduard Frlička
 * @date 2020-04-04
 * 
+* @brief Math library
 * @copyright Copyright (c) 2019
 * 
 */
@@ -15,13 +16,23 @@ namespace P_Math
     {
         private static double mem = 0; /*!< Variable where answers are saved to memory*/
 
-
+        /**
+        * @brief 1/x of number
+        * 
+        * @param x number to be inversed
+        * @return 1/x
+        */
         public static double reverse(double x)
         {
             if (x == 0) throw new Exception("nemozes delit nulou");
             return 1 / x;
         }
-
+        /**
+        * @brief Number pow to 2
+        * 
+        * @param x number to be squared
+        * @return x^2
+        */
         public static double square(double x)
         {
             return pow(x, 2);
@@ -480,8 +491,15 @@ namespace P_Math
             return Math.Pow(x, power);
         }
 
-        /**
-        * @return zero
+         /**
+        * @brief Square Root
+        * 
+        * @pre Parameter "x" >= 0
+        * @post square root of number
+        * 
+        * @param x Number
+        * 
+        * @return Square root of x
         */
         public static double sqrt(double x)
         {
@@ -489,6 +507,17 @@ namespace P_Math
             return Math.Sqrt(x);
         }
 
+         /**
+        * @brief Root of number
+        * 
+        * @pre Parameter "x" >= 0 and "power" != 0
+        * @post Root of number
+        * 
+        * @param x Number
+        * @param power root base
+        * 
+        * @return root of x
+        */
         public static double root(double x, int power)
         {
             if (x < 0) throw new Exception("Ty pako, odmocnina zo zapornych cisel neje :D");

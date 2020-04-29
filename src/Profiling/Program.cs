@@ -1,4 +1,13 @@
-﻿using System;
+﻿/**
+* @file OwnMath.cs
+* @author Eduard Frlička
+* @date 2020-04-04
+* 
+* @brief Profiling for math library
+* @copyright Copyright (c) 2019
+* 
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
