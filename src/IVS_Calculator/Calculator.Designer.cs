@@ -854,7 +854,7 @@
             this.TopMenu.Location = new System.Drawing.Point(2, 3);
             this.TopMenu.Name = "TopMenu";
             this.TopMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.TopMenu.Size = new System.Drawing.Size(40, 34);
+            this.TopMenu.Size = new System.Drawing.Size(160, 34);
             this.TopMenu.TabIndex = 12;
             // 
             // button_pivo
@@ -879,7 +879,7 @@
             this.aboutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -890,7 +890,7 @@
             this.coloursToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.coloursToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.coloursToolStripMenuItem.Name = "coloursToolStripMenuItem";
-            this.coloursToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
+            this.coloursToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.coloursToolStripMenuItem.Text = "Colours";
             this.coloursToolStripMenuItem.Click += new System.EventHandler(this.coloursToolStripMenuItem_Click);
             // 
@@ -900,8 +900,9 @@
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(128, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.toolStripMenuItem1.Text = "Manual";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // HelpToolStripMenuItem
             // 
@@ -910,7 +911,7 @@
             this.HelpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.HelpToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
-            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.HelpToolStripMenuItem.Text = "Help";
             this.HelpToolStripMenuItem.Click += new System.EventHandler(this.HelpToolStripMenuItem_Click);
             // 
@@ -932,7 +933,7 @@
             this.Name = "Calculator";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Kalkulačka v1.0";
+            this.Text = "Calculator v1.0";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             this.ButtonPanel.ResumeLayout(false);
             this.MemoryTable.ResumeLayout(false);

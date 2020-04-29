@@ -626,5 +626,10 @@ namespace IVS_Calculator
             var help = new Help();
             help.Show();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("dokumentace.pdf");
+        }
     }
 }
